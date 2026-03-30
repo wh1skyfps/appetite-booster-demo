@@ -1,49 +1,40 @@
-import { NicheProvider, useNiche } from "@/contexts/NicheContext";
 import Navbar from "@/components/Navbar";
-import IntroHero from "@/components/IntroHero";
-import NicheSelector from "@/components/NicheSelector";
-import DynamicHero from "@/components/DynamicHero";
-import DynamicMenu from "@/components/DynamicMenu";
-import BenefitsSection from "@/components/BenefitsSection";
+import HeroSection from "@/components/HeroSection";
+import HeroCta from "@/components/HeroCta";
+import CategoriesSection from "@/components/CategoriesSection";
+import FeaturedMenuSection from "@/components/FeaturedMenuSection";
+import WhyThisWebsiteSection from "@/components/WhyThisWebsiteSection";
+import MenuExperienceSection from "@/components/MenuExperienceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import CtaSection from "@/components/CtaSection";
-import ContactSection from "@/components/ContactSection";
+import WhatsAppCtaSection from "@/components/WhatsAppCtaSection";
+import AboutSection from "@/components/AboutSection";
+import LocationSection from "@/components/LocationSection";
 import FooterSection from "@/components/FooterSection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
-const PageContent = () => {
-  const { selectedNiche } = useNiche();
-
+const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <IntroHero />
-      <NicheSelector />
-      {selectedNiche && (
-        <>
-          <DynamicHero />
-          <DynamicMenu />
-        </>
-      )}
-      <div id="beneficios">
-        <BenefitsSection />
+      <HeroSection />
+      <HeroCta />
+      <CategoriesSection />
+      <div id="destaques">
+        <FeaturedMenuSection />
       </div>
+      <WhyThisWebsiteSection />
+      <MenuExperienceSection />
       <TestimonialsSection />
-      <CtaSection />
+      <WhatsAppCtaSection />
+      <div id="sobre">
+        <AboutSection />
+      </div>
       <div id="contacto">
-        <ContactSection />
+        <LocationSection />
       </div>
       <FooterSection />
       <FloatingWhatsApp />
     </div>
-  );
-};
-
-const Index = () => {
-  return (
-    <NicheProvider>
-      <PageContent />
-    </NicheProvider>
   );
 };
 

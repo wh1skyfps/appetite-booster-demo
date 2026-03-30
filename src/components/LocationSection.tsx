@@ -8,7 +8,7 @@ const contactInfo = [
   { icon: MessageCircle, title: "WhatsApp", text: "+351 912 345 678" },
 ];
 
-const ContactSection = () => {
+const LocationSection = () => {
   return (
     <section className="py-12 md:py-24 bg-secondary/50">
       <div className="container">
@@ -42,9 +42,14 @@ const ContactSection = () => {
                 </div>
               </div>
             ))}
+
             <div className="flex gap-2 pt-1">
               {["Instagram", "Facebook", "TikTok"].map((s) => (
-                <a key={s} href="#" className="bg-primary/10 text-primary font-bold text-xs md:text-sm px-4 py-2.5 rounded-full hover:bg-primary/20 active:scale-95 transition-all">
+                <a
+                  key={s}
+                  href="#"
+                  className="bg-primary/10 text-primary font-bold text-xs md:text-sm px-4 py-2.5 rounded-full hover:bg-primary/20 active:scale-95 transition-all"
+                >
                   {s}
                 </a>
               ))}
@@ -69,4 +74,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default LocationSection;

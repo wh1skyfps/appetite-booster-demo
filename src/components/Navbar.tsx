@@ -1,36 +1,31 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { useNiche } from "@/contexts/NicheContext";
 
 const links = [
-  { label: "Nichos", href: "#nichos" },
-  { label: "Cardápio", href: "#menu" },
-  { label: "Benefícios", href: "#beneficios" },
+  { label: "Cardápio", href: "#cardapio" },
+  { label: "Destaques", href: "#destaques" },
+  { label: "Sobre", href: "#sobre" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { selectedNiche, clearNiche } = useNiche();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-section-dark/90 backdrop-blur-md border-b border-section-dark-foreground/10">
       <div className="container flex items-center justify-between h-14 md:h-16">
-        <button onClick={clearNiche} className="text-lg md:text-xl font-extrabold text-primary">
+        <a href="#" className="text-lg md:text-xl font-extrabold text-primary">
           🔥 SaborDigital
-        </button>
+        </a>
 
-        {selectedNiche && (
-          <div className="hidden lg:flex items-center gap-1.5 bg-section-dark-foreground/5 rounded-full px-3 py-1">
-            <span className="text-sm">{selectedNiche.emoji}</span>
-            <span className="text-xs font-medium text-section-dark-foreground/60">{selectedNiche.name}</span>
-          </div>
-        )}
-
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a key={l.label} href={l.href} className="text-sm font-medium text-section-dark-foreground/70 hover:text-primary transition-colors">
+            <a
+              key={l.label}
+              href={l.href}
+              className="text-sm font-medium text-section-dark-foreground/70 hover:text-primary transition-colors"
+            >
               {l.label}
             </a>
           ))}
