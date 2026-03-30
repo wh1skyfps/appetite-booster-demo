@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { ArrowRight, Code2, Copy, Rocket, Zap } from 'lucide-react';
+import { ArrowRight, Eye, Smartphone, TrendingUp, Zap } from 'lucide-react';
 import { useState } from 'react';
 
 export interface CardFlipProps {
@@ -10,14 +10,14 @@ export interface CardFlipProps {
   description?: string;
   features?: string[];
   color?: string;
-  emoji?: string;
   image?: string;
+  emoji?: string;
 }
 
 export default function CardFlip({
   title = 'Build MVPs Fast',
   subtitle = 'Launch your idea in record time',
-  description = 'Copy, paste, customize—and launch your MVP faster than ever with our developer-first component library.',
+  description = 'Copy, paste, customize—and launch your MVP faster than ever.',
   features = [
     'Copy & Paste Ready',
     'Developer-First',
@@ -25,8 +25,8 @@ export default function CardFlip({
     'Zero Setup Required',
   ],
   color = '#ff2e88',
-  emoji,
   image,
+  emoji = '🍽️',
 }: CardFlipProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -44,146 +44,82 @@ export default function CardFlip({
         )}
       >
         {/* Front of card */}
-        <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
-          {/* Background gradient effect */}
+        <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden border border-white/10 shadow-xl">
+          {/* Background image */}
+          {image && (
+            <img
+              src={image}
+              alt={title}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+          )}
+          {/* Overlay gradient */}
           <div
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(145deg, ${color}15 0%, #0a0a0a 50%, ${color}08 100%)`,
+              background: `linear-gradient(to top, ${color}dd 0%, ${color}88 35%, transparent 70%)`,
             }}
           />
 
-          {/* Animated visual area */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative w-48 h-48 md:w-56 md:h-56">
-              {/* Animated code blocks */}
-              {[...Array(6)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute rounded-md opacity-0"
-                  style={{
-                    width: `${60 + i * 12}px`,
-                    height: '8px',
-                    background: `linear-gradient(90deg, ${color}${40 + i * 8}, transparent)`,
-                    top: `${20 + i * 28}px`,
-                    left: `${10 + (i % 3) * 15}px`,
-                    animation: `slideIn ${2 + i * 0.3}s ease-in-out ${i * 0.4}s infinite`,
-                  }}
-                />
-              ))}
-
-              {/* Central icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div
-                  className="w-20 h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-2xl"
-                  style={{
-                    background: `linear-gradient(135deg, ${color}, ${color}88)`,
-                    boxShadow: `0 0 60px ${color}40`,
-                  }}
-                >
-                  {emoji ? (
-                    <span className="text-3xl md:text-4xl">{emoji}</span>
-                  ) : (
-                    <Rocket className="w-10 h-10 md:w-12 md:h-12 text-white" />
-                  )}
-                </div>
-              </div>
-            </div>
+          {/* Emoji badge */}
+          <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-black/30 backdrop-blur-md flex items-center justify-center text-2xl">
+            {emoji}
           </div>
-
-          {/* Background image overlay (optional) */}
-          {image && (
-            <>
-              <img
-                src={image}
-                alt={title}
-                className="absolute inset-0 w-full h-full object-cover opacity-30"
-                loading="lazy"
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: `linear-gradient(to top, ${color}cc 0%, ${color}66 30%, rgba(0,0,0,0.7) 100%)`,
-                }}
-              />
-            </>
-          )}
 
           {/* Bottom content */}
           <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-            <div className="flex items-end justify-between gap-3">
-              <div className="min-w-0">
-                <div className="text-white font-extrabold text-base md:text-lg leading-tight mb-1 truncate">
-                  {title}
-                </div>
-                <div className="text-white/50 text-xs md:text-sm leading-relaxed line-clamp-2">
-                  {subtitle}
-                </div>
-              </div>
-              <div
-                className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center border border-white/10 transition-all duration-300 group-hover:scale-110"
-                style={{ background: `${color}30` }}
-              >
-                <ArrowRight className="w-4 h-4 text-white" />
-              </div>
+            <h3 className="text-white font-extrabold text-lg md:text-xl leading-tight mb-1">
+              {title}
+            </h3>
+            <p className="text-white/75 text-xs md:text-sm leading-relaxed">
+              {subtitle}
+            </p>
+            <div className="mt-3 flex items-center gap-1.5 text-white/50 text-xs font-medium">
+              <span>Hover para detalhes</span>
+              <ArrowRight className="w-3 h-3" />
             </div>
           </div>
         </div>
 
         {/* Back of card */}
-        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
-          {/* Background gradient */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(145deg, ${color}25 0%, #0a0a0a 40%, ${color}15 100%)`,
-            }}
-          />
+        <div
+          className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden border border-white/10 shadow-xl"
+          style={{ background: `linear-gradient(135deg, ${color}, ${color}cc)` }}
+        >
+          <div className="absolute inset-0 bg-black/20" />
 
           <div className="relative h-full flex flex-col justify-between p-5 md:p-6">
-            {/* Top section */}
+            {/* Top */}
             <div>
-              <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center"
-                  style={{ background: `${color}30` }}
-                >
-                  {emoji ? (
-                    <span className="text-lg">{emoji}</span>
-                  ) : (
-                    <Rocket className="w-5 h-5" style={{ color }} />
-                  )}
-                </div>
-                <div className="text-white font-extrabold text-sm md:text-base leading-tight">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">{emoji}</span>
+                <h3 className="text-white font-extrabold text-base md:text-lg leading-tight">
                   {title}
-                </div>
+                </h3>
               </div>
-              <div className="text-white/60 text-xs md:text-sm leading-relaxed">
+              <p className="text-white/80 text-xs md:text-sm leading-relaxed">
                 {description}
-              </div>
+              </p>
             </div>
 
             {/* Features */}
-            <div className="space-y-2 my-4">
+            <div className="space-y-2.5 my-4">
               {features.map((feature, index) => {
-                const icons = [Copy, Code2, Rocket, Zap];
+                const icons = [Eye, Smartphone, TrendingUp, Zap];
                 const IconComponent = icons[index % icons.length];
-
                 return (
                   <div
                     key={feature}
-                    className="flex items-center gap-2.5 text-white/80"
+                    className="flex items-center gap-2.5 text-white/90"
                     style={{
                       animation: isFlipped
-                        ? `slideInFeature 0.4s ease-out ${index * 0.08}s both`
+                        ? `fadeSlideIn 0.4s ease-out ${index * 0.08}s both`
                         : undefined,
                     }}
                   >
-                    <div
-                      className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
-                      style={{ background: `${color}20` }}
-                    >
-                      <IconComponent className="w-3.5 h-3.5" style={{ color }} />
+                    <div className="w-7 h-7 rounded-lg bg-white/15 flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="w-3.5 h-3.5" />
                     </div>
                     <span className="text-xs md:text-sm font-medium">{feature}</span>
                   </div>
@@ -192,20 +128,10 @@ export default function CardFlip({
             </div>
 
             {/* CTA */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span
-                  className="text-sm font-bold"
-                  style={{ color }}
-                >
-                  Ver Demo
-                </span>
-              </div>
-              <div
-                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300"
-                style={{ background: `${color}25` }}
-              >
-                <ArrowRight className="w-4 h-4" style={{ color }} />
+            <div className="flex items-center justify-between text-white text-sm font-bold">
+              <span>Ver Demo</span>
+              <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                <ArrowRight className="w-4 h-4" />
               </div>
             </div>
           </div>
@@ -213,12 +139,7 @@ export default function CardFlip({
       </div>
 
       <style>{`
-        @keyframes slideIn {
-          0% { transform: translateX(-100px); opacity: 0; }
-          50% { transform: translateX(0); opacity: 0.8; }
-          100% { transform: translateX(100px); opacity: 0; }
-        }
-        @keyframes slideInFeature {
+        @keyframes fadeSlideIn {
           0% { transform: translateX(-12px); opacity: 0; }
           100% { transform: translateX(0); opacity: 1; }
         }
