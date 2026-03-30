@@ -62,7 +62,7 @@ const niches = [
     desc: "Design focado em pedidos rápidos e delivery, com visual vibrante e energético.",
     features: ["Delivery otimizado", "Visual vibrante", "Pedidos instantâneos", "Mobile-first total"],
     color: "#7C3AED",
-    image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&q=80",
+    image: acaiCard,
   },
   {
     path: "/cafeteria",
