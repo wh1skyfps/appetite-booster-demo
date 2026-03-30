@@ -21,23 +21,55 @@ const categories = [
 
 const CategoriesSection = () => {
   return (
-    <section id="cardapio" className="py-16 md:py-24 bg-background">
+    <section id="cardapio" className="py-12 md:py-24 bg-background">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-3">
             Explore o <span className="text-primary">Cardápio</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-md mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-md mx-auto">
             Navegue pelas categorias e encontre o que mais te dá água na boca.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        {/* Mobile: horizontal scroll strip */}
+        <div className="md:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide pb-2">
+          <div className="flex gap-3 w-max">
+            {categories.map((cat, i) => (
+              <motion.a
+                key={cat.name}
+                href="#cardapio"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.04 }}
+                className="group relative rounded-2xl overflow-hidden w-36 h-44 flex-shrink-0 active:scale-95 transition-transform"
+              >
+                <img
+                  src={cat.image}
+                  alt={cat.name}
+                  loading="lazy"
+                  width={800}
+                  height={800}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <h3 className="font-bold text-sm text-section-dark-foreground leading-tight">{cat.name}</h3>
+                  <p className="text-xs text-section-dark-foreground/60">{cat.count} itens</p>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: grid */}
+        <div className="hidden md:grid grid-cols-3 lg:grid-cols-4 gap-5">
           {categories.map((cat, i) => (
             <motion.a
               key={cat.name}
@@ -57,7 +89,7 @@ const CategoriesSection = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <h3 className="font-bold text-lg text-section-dark-foreground">{cat.name}</h3>
                 <p className="text-sm text-section-dark-foreground/70">{cat.count} itens</p>
               </div>
