@@ -5,7 +5,7 @@ const config: NicheConfig = {
   name: "Açaí Delivery",
   tagline: "Frescura e energia na sua porta",
   heroSubtitle: "Açaí premium, bowls personalizados e entrega rápida para o seu dia a dia.",
-  heroImage: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=1400&q=80",
+  heroImage: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=1400&q=80",
   heroStyle: "centered",
   cardStyle: "overlay",
   theme: {
