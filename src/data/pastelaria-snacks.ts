@@ -26,10 +26,10 @@ const config: NicheConfig = {
   ],
   products: [
     { name: "Pastel de Nata", desc: "Pastel de nata artesanal com canela e açúcar em pó. Crocante e cremoso.", price: "1,50", image: "https://images.unsplash.com/photo-1580910365203-285f61e45a28?w=600&q=80", tag: "Clássico" },
-    { name: "Rissol de Camarão", desc: "Massa crocante recheada com camarão cremoso e bechamel.", price: "2,90", image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80", tag: "Popular" },
-    { name: "Coxinha Especial", desc: "Coxinha jumbo de frango com catupiry, empanada e frita na hora.", price: "3,90", image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" },
-    { name: "Bola de Berlim", desc: "Bola de Berlim recheada com creme pasteleiro, açúcar por fora.", price: "2,50", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80", tag: "Doce" },
-    { name: "Combo Lanche", desc: "2 salgados + 1 café ou sumo natural.", price: "6,90", image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80", tag: "Promoção" },
+    { name: "Rissol de Camarão", desc: "Massa crocante recheada com camarão cremoso e bechamel.", price: "2,90", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80", tag: "Popular" },
+    { name: "Coxinha Especial", desc: "Coxinha jumbo de frango com catupiry, empanada e frita na hora.", price: "3,90", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" },
+    { name: "Bola de Berlim", desc: "Bola de Berlim recheada com creme pasteleiro, açúcar por fora.", price: "2,50", image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=80", tag: "Doce" },
+    { name: "Combo Lanche", desc: "2 salgados + 1 café ou sumo natural.", price: "6,90", image: "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600&q=80", tag: "Promoção" },
     { name: "Tábua de Snacks", desc: "Mix de 6 salgados variados para partilhar.", price: "9,90", image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&q=80" },
   ],
   whyPoints: [

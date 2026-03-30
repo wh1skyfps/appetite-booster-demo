@@ -25,11 +25,11 @@ const config: NicheConfig = {
     { name: "Combos", emoji: "🎯" },
   ],
   products: [
-    { name: "Açaí Premium 500ml", desc: "Açaí puro da Amazónia com granola, banana, morango e leite condensado.", price: "12,90", image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=600&q=80", tag: "Best Seller" },
-    { name: "Bowl Tropical", desc: "Açaí com manga, coco ralado, kiwi, chia e mel.", price: "14,90", image: "https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?w=600&q=80", tag: "Novidade" },
-    { name: "Smoothie Verde", desc: "Espinafre, banana, abacaxi, gengibre e leite de coco.", price: "8,90", image: "https://images.unsplash.com/photo-1638176066666-ffb2f013c7dd?w=600&q=80" },
-    { name: "Açaí Fitness 300ml", desc: "Açaí com whey protein, banana, aveia e pasta de amendoim.", price: "10,90", image: "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?w=600&q=80", tag: "Fitness" },
-    { name: "Bowl Pitaya", desc: "Pitaya rosa com morangos, granola, coco e mel de agave.", price: "13,90", image: "https://images.unsplash.com/photo-1546039907-7b3a4b4e58b9?w=600&q=80" },
+    { name: "Açaí Premium 500ml", desc: "Açaí puro da Amazónia com granola, banana, morango e leite condensado.", price: "12,90", image: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80", tag: "Best Seller" },
+    { name: "Bowl Tropical", desc: "Açaí com manga, coco ralado, kiwi, chia e mel.", price: "14,90", image: "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=600&q=80", tag: "Novidade" },
+    { name: "Smoothie Verde", desc: "Espinafre, banana, abacaxi, gengibre e leite de coco.", price: "8,90", image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" },
+    { name: "Açaí Fitness 300ml", desc: "Açaí com whey protein, banana, aveia e pasta de amendoim.", price: "10,90", image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=600&q=80", tag: "Fitness" },
+    { name: "Bowl Pitaya", desc: "Pitaya rosa com morangos, granola, coco e mel de agave.", price: "13,90", image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600&q=80" },
     { name: "Combo Duplo", desc: "2 açaís 500ml com toppings à escolha + 2 sumos naturais.", price: "28,90", image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=600&q=80", tag: "Promoção" },
   ],
   whyPoints: [
