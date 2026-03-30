@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 
 interface NicheWhatsAppCtaProps {
   ctaText: string;
@@ -9,7 +9,7 @@ interface NicheWhatsAppCtaProps {
 
 const NicheWhatsAppCta = ({ ctaText, ctaSubtext, whatsappNumber }: NicheWhatsAppCtaProps) => {
   return (
-    <section className="py-12 md:py-20 section-dark">
+    <section className="py-14 md:py-24 section-dark">
       <div className="container text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,17 +23,18 @@ const NicheWhatsAppCta = ({ ctaText, ctaSubtext, whatsappNumber }: NicheWhatsApp
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 text-white">
             {ctaText}
           </h2>
-          <p className="text-white/70 text-base md:text-lg mb-8">
+          <p className="text-white/60 text-sm md:text-lg mb-8 leading-relaxed">
             {ctaSubtext}
           </p>
           <a
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 btn-whatsapp font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105 active:scale-95 min-h-[52px]"
+            className="inline-flex items-center gap-2.5 btn-whatsapp font-bold px-10 py-4 rounded-full text-base transition-all hover:scale-105 active:scale-95 min-h-[56px] shadow-lg shadow-whatsapp/20 group"
           >
             <MessageCircle className="w-5 h-5" />
             Pedir pelo WhatsApp
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>
       </div>

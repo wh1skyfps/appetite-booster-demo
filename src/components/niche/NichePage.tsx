@@ -18,7 +18,6 @@ interface NichePageProps {
 const NichePage = ({ config }: NichePageProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Apply niche theme
     const root = document.documentElement;
     root.style.setProperty("--primary", config.theme.primary);
     root.style.setProperty("--primary-foreground", config.theme.primaryForeground);
@@ -28,7 +27,6 @@ const NichePage = ({ config }: NichePageProps) => {
     root.style.setProperty("--section-dark-foreground", config.theme.sectionDarkForeground);
 
     return () => {
-      // Reset to defaults
       root.style.removeProperty("--primary");
       root.style.removeProperty("--primary-foreground");
       root.style.removeProperty("--accent");
@@ -40,7 +38,7 @@ const NichePage = ({ config }: NichePageProps) => {
 
   return (
     <div className="min-h-screen">
-      <NicheNavbar name={config.name} />
+      <NicheNavbar name={config.name} whatsappNumber={config.whatsappNumber} />
       <NicheHero
         name={config.name}
         tagline={config.tagline}
@@ -48,9 +46,10 @@ const NichePage = ({ config }: NichePageProps) => {
         image={config.heroImage}
         overlay={config.theme.heroOverlay}
         whatsappNumber={config.whatsappNumber}
+        heroStyle={config.heroStyle}
       />
       <NicheCategories categories={config.categories} />
-      <NicheProducts products={config.products} whatsappNumber={config.whatsappNumber} />
+      <NicheProducts products={config.products} whatsappNumber={config.whatsappNumber} cardStyle={config.cardStyle} />
       <NicheWhySection points={config.whyPoints} />
       <NicheWhatsAppCta
         ctaText={config.ctaText}

@@ -6,6 +6,8 @@ const config: NicheConfig = {
   tagline: "Uma experiência gastronómica de excelência",
   heroSubtitle: "Pratos refinados, ingredientes selecionados e um ambiente que convida a saborear cada momento.",
   heroImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80",
+  heroStyle: "split",
+  cardStyle: "elegant",
   theme: {
     primary: "30 60% 40%",
     primaryForeground: "0 0% 100%",

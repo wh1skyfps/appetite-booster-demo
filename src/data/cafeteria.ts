@@ -6,6 +6,8 @@ const config: NicheConfig = {
   tagline: "Onde cada manhã é especial",
   heroSubtitle: "Café de especialidade, brunch criativo e um ambiente acolhedor para começar bem o dia.",
   heroImage: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&q=80",
+  heroStyle: "editorial",
+  cardStyle: "horizontal",
   theme: {
     primary: "25 55% 42%",
     primaryForeground: "0 0% 100%",
