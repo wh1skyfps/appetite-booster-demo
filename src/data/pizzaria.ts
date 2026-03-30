@@ -6,6 +6,8 @@ const config: NicheConfig = {
   tagline: "Massa artesanal, sabor autêntico",
   heroSubtitle: "Pizzas feitas no forno a lenha, com ingredientes frescos e receitas que aquecem a alma.",
   heroImage: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1400&q=80",
+  heroStyle: "centered",
+  cardStyle: "overlay",
   theme: {
     primary: "12 80% 50%",
     primaryForeground: "0 0% 100%",

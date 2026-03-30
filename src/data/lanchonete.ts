@@ -6,6 +6,8 @@ const config: NicheConfig = {
   tagline: "Rápido, saboroso e no ponto certo",
   heroSubtitle: "Lanches frescos, combos irresistíveis e atendimento rápido para matar a fome a qualquer hora.",
   heroImage: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=1400&q=80",
+  heroStyle: "minimal",
+  cardStyle: "compact",
   theme: {
     primary: "0 85% 55%",
     primaryForeground: "0 0% 100%",

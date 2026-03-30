@@ -6,6 +6,8 @@ const config: NicheConfig = {
   tagline: "Doçura em cada colherada",
   heroSubtitle: "Gelados artesanais feitos com frutas frescas, cremes naturais e muito carinho.",
   heroImage: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=1400&q=80",
+  heroStyle: "playful",
+  cardStyle: "soft",
   theme: {
     primary: "330 70% 60%",
     primaryForeground: "0 0% 100%",

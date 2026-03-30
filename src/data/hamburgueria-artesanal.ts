@@ -6,6 +6,8 @@ const config: NicheConfig = {
   tagline: "Burgers feitos com alma e fogo",
   heroSubtitle: "Blend artesanal, pão brioche, ingredientes premium. Cada mordida conta uma história.",
   heroImage: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=80",
+  heroStyle: "bold",
+  cardStyle: "bold",
   theme: {
     primary: "35 90% 50%",
     primaryForeground: "0 0% 5%",
