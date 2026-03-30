@@ -5,7 +5,7 @@ const config: NicheConfig = {
   name: "Pastelaria & Snacks",
   tagline: "Crocante por fora, irresistível por dentro",
   heroSubtitle: "Pastéis frescos, salgados dourados e snacks rápidos para qualquer hora do dia.",
-  heroImage: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&q=80",
+  heroImage: "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=1400&q=80",
   heroStyle: "minimal",
   cardStyle: "compact",
   theme: {
