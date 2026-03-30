@@ -127,14 +127,3 @@
     display: none;
   }
 }
-  }
-
-  .btn-whatsapp {
-    background-color: hsl(var(--whatsapp));
-    color: hsl(var(--whatsapp-foreground));
-  }
-
-  .btn-whatsapp:hover {
-    background-color: hsl(142 70% 35%);
-  }
-}
