@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import CardFlip from "@/components/ui/flip-card";
+import acaiCard from "@/assets/acai-card.jpeg";
 
 const niches = [
   {
