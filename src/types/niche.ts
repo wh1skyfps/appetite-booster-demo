@@ -23,12 +23,17 @@ export interface NicheWhyPoint {
   icon: string;
 }
 
+export type HeroStyle = "centered" | "split" | "editorial" | "bold" | "minimal" | "playful";
+export type CardStyle = "elegant" | "overlay" | "horizontal" | "bold" | "soft" | "compact";
+
 export interface NicheConfig {
   id: string;
   name: string;
   tagline: string;
   heroSubtitle: string;
   heroImage: string;
+  heroStyle: HeroStyle;
+  cardStyle: CardStyle;
   theme: {
     primary: string;
     primaryForeground: string;
