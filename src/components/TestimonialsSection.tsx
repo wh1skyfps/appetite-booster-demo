@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { name: "Ana Oliveira", role: "Cliente habitual", text: "O atendimento é super rápido e a comida chega sempre quentinha. O site facilita muito na hora de escolher!", stars: 5 },
-  { name: "Carlos Santos", role: "Primeira compra", text: "Fiquei impressionado com o site! Muito bonito e fácil de usar. A pizza chegou perfeita.", stars: 5 },
-  { name: "Maria Costa", role: "Cliente há 2 anos", text: "Pedir pelo WhatsApp é muito prático. O cardápio é lindo e bem organizado. Melhor lanchonete da zona!", stars: 5 },
-  { name: "Pedro Almeida", role: "Cliente delivery", text: "A experiência no telemóvel é excelente. Consigo ver tudo e pedir em menos de 2 minutos.", stars: 5 },
-  { name: "Sofia Ferreira", role: "Cliente nova", text: "Encontrei pelo Instagram e o site me convenceu. Muito profissional! O hambúrguer é incrível.", stars: 5 },
-  { name: "João Rodrigues", role: "Cliente fiel", text: "Melhor combo da cidade e o site torna tudo mais fácil. Recomendo a todos os meus amigos.", stars: 5 },
+  { name: "Ana Oliveira", role: "Dona de Hamburgueria", text: "O site mudou completamente a imagem do meu negócio. Os pedidos pelo WhatsApp triplicaram!", stars: 5 },
+  { name: "Carlos Santos", role: "Dono de Pizzaria", text: "O cardápio ficou tão bonito que os clientes dizem que dá mais fome só de ver o site.", stars: 5 },
+  { name: "Maria Costa", role: "Dona de Lanchonete", text: "Nunca pensei que o meu negócio pudesse parecer tão profissional online. Estou impressionada!", stars: 5 },
+  { name: "Pedro Almeida", role: "Dono de Cafeteria", text: "A experiência no telemóvel é perfeita. Os clientes adoram pedir pelo site.", stars: 5 },
+  { name: "Sofia Ferreira", role: "Dona de Açaí", text: "O visual do site vende sozinho. Os novos clientes chegam já decididos a pedir.", stars: 5 },
+  { name: "João Rodrigues", role: "Dono de Restaurante", text: "Profissionalismo total. O site elevou a percepção do meu restaurante.", stars: 5 },
 ];
 
 const TestimonialsSection = () => {
@@ -21,21 +21,17 @@ const TestimonialsSection = () => {
           className="text-center mb-8 md:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-3">
-            O que os clientes <span className="text-primary">dizem</span>
+            O que os donos <span className="text-primary">dizem</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg max-w-md mx-auto">
-            A opinião de quem já experimentou fala por si.
+            Negócios reais que transformaram a sua presença online.
           </p>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
         <div className="md:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide pb-2">
           <div className="flex gap-4 w-max">
             {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="bg-card rounded-2xl p-5 shadow-sm w-72 flex-shrink-0"
-              >
+              <div key={t.name} className="bg-card rounded-2xl p-5 shadow-sm w-72 flex-shrink-0">
                 <div className="flex gap-0.5 mb-3">
                   {Array.from({ length: t.stars }).map((_, j) => (
                     <Star key={j} className="w-3.5 h-3.5 fill-primary text-primary" />
@@ -51,7 +47,6 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Desktop: grid */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <motion.div

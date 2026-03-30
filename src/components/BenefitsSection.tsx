@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { LayoutGrid, Smartphone, Star, ThumbsUp, MessageSquare, Eye } from "lucide-react";
 
 const benefits = [
-  { icon: LayoutGrid, title: "Cardápio bonito e organizado", desc: "Apresente os seus produtos de forma moderna e atrativa." },
+  { icon: LayoutGrid, title: "Cardápio profissional", desc: "Apresente os seus produtos de forma moderna e atrativa." },
   { icon: ThumbsUp, title: "Mais facilidade para pedir", desc: "Navegação intuitiva que converte visitas em pedidos." },
-  { icon: Eye, title: "Melhor imagem online", desc: "Transmita profissionalismo e conquiste novos clientes." },
+  { icon: Eye, title: "Melhor presença online", desc: "Transmita profissionalismo e conquiste novos clientes." },
   { icon: Star, title: "Mais confiança", desc: "Um site bonito passa credibilidade e segurança." },
-  { icon: MessageSquare, title: "Praticidade no WhatsApp", desc: "Pedidos diretos pelo WhatsApp, sem complicação." },
+  { icon: MessageSquare, title: "Pedidos pelo WhatsApp", desc: "Pedidos diretos pelo WhatsApp, sem complicação." },
   { icon: Smartphone, title: "Perfeito no telemóvel", desc: "100% responsivo e otimizado para mobile." },
 ];
 
-const WhyThisWebsiteSection = () => {
+const BenefitsSection = () => {
   return (
     <section className="py-12 md:py-24 section-dark">
       <div className="container">
@@ -24,7 +24,7 @@ const WhyThisWebsiteSection = () => {
             Por que ter um site <span className="text-primary">assim?</span>
           </h2>
           <p className="text-section-dark-foreground/70 text-base md:text-lg max-w-lg mx-auto">
-            Um site moderno transforma a forma como o seu negócio é visto.
+            Um site moderno transforma a forma como o seu negócio é visto e como os clientes pedem.
           </p>
         </motion.div>
 
@@ -51,4 +51,4 @@ const WhyThisWebsiteSection = () => {
   );
 };
 
-export default WhyThisWebsiteSection;
+export default BenefitsSection;
