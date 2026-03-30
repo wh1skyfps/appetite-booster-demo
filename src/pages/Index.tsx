@@ -72,14 +72,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-10 border-t border-white/10">
-        <div className="container text-center">
-          <p className="text-white/30 text-sm">
-            Demos criadas com Lovable · Cada site é totalmente personalizável
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };
