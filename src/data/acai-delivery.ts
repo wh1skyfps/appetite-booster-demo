@@ -1,11 +1,13 @@
 import type { NicheConfig } from "@/types/niche";
+import acaiHero from "@/assets/acai-hero.jpeg";
+import acaiBowl from "@/assets/acai-bowl.jpg";
 
 const config: NicheConfig = {
   id: "acai-delivery",
   name: "Açaí Delivery",
   tagline: "Frescura e energia na sua porta",
   heroSubtitle: "Açaí premium, bowls personalizados e entrega rápida para o seu dia a dia.",
-  heroImage: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=1400&q=80",
+  heroImage: acaiHero,
   heroStyle: "centered",
   cardStyle: "overlay",
   theme: {
@@ -25,12 +27,12 @@ const config: NicheConfig = {
     { name: "Combos", emoji: "🎯" },
   ],
   products: [
-    { name: "Açaí Premium 500ml", desc: "Açaí puro da Amazónia com granola, banana, morango e leite condensado.", price: "12,90", image: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80", tag: "Best Seller" },
-    { name: "Bowl Tropical", desc: "Açaí com manga, coco ralado, kiwi, chia e mel.", price: "14,90", image: "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=600&q=80", tag: "Novidade" },
+    { name: "Açaí Premium 500ml", desc: "Açaí puro da Amazónia com granola, banana, morango e leite condensado.", price: "12,90", image: acaiHero, tag: "Best Seller" },
+    { name: "Bowl Tropical", desc: "Açaí com manga, coco ralado, kiwi, chia e mel.", price: "14,90", image: acaiBowl, tag: "Novidade" },
     { name: "Smoothie Verde", desc: "Espinafre, banana, abacaxi, gengibre e leite de coco.", price: "8,90", image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" },
-    { name: "Açaí Fitness 300ml", desc: "Açaí com whey protein, banana, aveia e pasta de amendoim.", price: "10,90", image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=600&q=80", tag: "Fitness" },
-    { name: "Bowl Pitaya", desc: "Pitaya rosa com morangos, granola, coco e mel de agave.", price: "13,90", image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600&q=80" },
-    { name: "Combo Duplo", desc: "2 açaís 500ml com toppings à escolha + 2 sumos naturais.", price: "28,90", image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=600&q=80", tag: "Promoção" },
+    { name: "Açaí Fitness 300ml", desc: "Açaí com whey protein, banana, aveia e pasta de amendoim.", price: "10,90", image: acaiBowl, tag: "Fitness" },
+    { name: "Bowl Pitaya", desc: "Pitaya rosa com morangos, granola, coco e mel de agave.", price: "13,90", image: acaiHero, tag: "Fresh" },
+    { name: "Combo Duplo", desc: "2 açaís 500ml com toppings à escolha + 2 sumos naturais.", price: "28,90", image: acaiBowl, tag: "Promoção" },
   ],
   whyPoints: [
     { title: "Delivery Otimizado", desc: "Cardápio pensado para pedidos rápidos e práticos.", icon: "zap" },
