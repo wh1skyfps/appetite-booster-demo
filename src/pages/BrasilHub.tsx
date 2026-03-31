@@ -28,7 +28,9 @@ const BrasilHub = () => (
             Demos
           </h1>
           <p className="text-sm sm:text-base text-white/35 max-w-xl mb-14 md:mb-20">
-            Demos premium para nichos de alto valor no mercado brasileiro. Cada demo é única, responsiva e feita para converter.
+            Selecione seu nicho para ver sua DEMO.<br />
+            É SOMENTE UMA DEMO, Nada final!!<br />
+            O seu final é muito melhor!
           </p>
         </motion.div>
 
