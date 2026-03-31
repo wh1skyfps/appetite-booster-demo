@@ -5,7 +5,16 @@ export const hairSalonConfig: NicheConfig = {
   heroSubtitle: "Premium hair styling, extensions, and color services by award-winning stylists. Walk in beautiful, walk out unforgettable.",
   heroImage: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
   heroStyle: "split", cardStyle: "overlay",
+  whyLayout: "alternating",
+  sectionOrder: ["hero", "categories", "gallery", "services", "why", "testimonials", "cta", "location"],
   theme: { primary: "280 70% 50%", primaryForeground: "0 0% 100%", accent: "40 80% 60%", heroOverlay: "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5))", sectionDark: "280 30% 10%", sectionDarkForeground: "0 0% 95%" },
+  gallery: [
+    { src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80", alt: "Balayage Transformation", span: "tall" },
+    { src: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80", alt: "Color Work" },
+    { src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80", alt: "Extensions" },
+    { src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80", alt: "Styling Session", span: "wide" },
+    { src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80", alt: "Bridal Hair" },
+  ],
   categories: [
     { name: "Cuts", emoji: "✂️" }, { name: "Color", emoji: "🎨" }, { name: "Extensions", emoji: "💇‍♀️" },
     { name: "Styling", emoji: "💫" }, { name: "Treatments", emoji: "🧴" }, { name: "Bridal", emoji: "👰" },
@@ -32,5 +41,5 @@ export const hairSalonConfig: NicheConfig = {
   whatsappNumber: "15559876543",
   location: { address: "789 Glamour Ave, New York, NY 10001", hours: "Tue-Sat: 10AM - 8PM | Sun: 11AM - 5PM", phone: "+1 (555) 987-6543", mapQuery: "luxury hair salon New York" },
   footerTagline: "Where every strand tells a story.", currency: "$", backPath: "/global",
-  labels: { navServices: "Services", navAbout: "About", navContact: "Contact", navCta: "Book Now", heroCtaPrimary: "Our Services", heroCtaSecondary: "Book Appointment", servicesTitle: "Our", servicesHighlight: "Services", servicesSubtitle: "Expert styling services for every occasion.", servicesCta: "Book", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "More than a website — a client magnet.", testimonialsTitle: "What our", testimonialsHighlight: "clients say", locationTitle: "Find", locationHighlight: "us", ctaButtonLabel: "Book Now", backLabel: "Back to Demos" },
+  labels: { navServices: "Services", navAbout: "About", navContact: "Contact", navCta: "Book Now", heroCtaPrimary: "Our Services", heroCtaSecondary: "Book Appointment", servicesTitle: "Our", servicesHighlight: "Services", servicesSubtitle: "Expert styling services for every occasion.", servicesCta: "Book", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "More than a website — a client magnet.", testimonialsTitle: "What our", testimonialsHighlight: "clients say", locationTitle: "Find", locationHighlight: "us", ctaButtonLabel: "Book Now", backLabel: "Back to Demos", galleryTitle: "Our", galleryHighlight: "Portfolio" },
 };
