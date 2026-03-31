@@ -3,7 +3,7 @@ import type { NicheConfig } from "@/types/niche";
 export const realEstateConfig: NicheConfig = {
   id: "real-estate", name: "Prestige Properties", tagline: "Find Your Dream Home",
   heroSubtitle: "Luxury real estate services with a personal touch. From penthouses to estates — we find the perfect property for you.",
-  heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=85",
   heroStyle: "split", cardStyle: "glass",
   whyLayout: "icon-row",
   sectionOrder: ["hero", "stats", "categories", "services", "why", "gallery", "testimonials", "cta", "location"],

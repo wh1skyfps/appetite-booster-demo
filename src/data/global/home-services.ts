@@ -3,7 +3,7 @@ import type { NicheConfig } from "@/types/niche";
 export const homeServicesConfig: NicheConfig = {
   id: "home-services", name: "TrustHome Pro", tagline: "Your Home in Expert Hands",
   heroSubtitle: "Licensed, insured, and trusted home improvement professionals. From plumbing to renovations — we do it right.",
-  heroImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1400&q=85",
   heroStyle: "centered", cardStyle: "horizontal",
   whyLayout: "grid",
   sectionOrder: ["hero", "categories", "stats", "services", "process", "testimonials", "why", "cta", "location"],

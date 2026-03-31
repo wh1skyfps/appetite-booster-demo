@@ -3,7 +3,7 @@ import type { NicheConfig } from "@/types/niche";
 export const autoDetailingConfig: NicheConfig = {
   id: "auto-detailing", name: "Prestige Auto Detail", tagline: "Your Car Deserves the Best",
   heroSubtitle: "Premium auto detailing, ceramic coating, and paint protection. We treat every vehicle like a masterpiece.",
-  heroImage: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1400&q=85",
   heroStyle: "bold", cardStyle: "bold",
   whyLayout: "grid",
   sectionOrder: ["hero", "categories", "services", "process", "stats", "gallery", "cta", "testimonials", "why", "location"],

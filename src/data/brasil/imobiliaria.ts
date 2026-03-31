@@ -2,7 +2,7 @@ import type { NicheConfig } from "@/types/niche";
 export const imobiliariaConfig: NicheConfig = {
   id: "imobiliaria", name: "Prime Imóveis", tagline: "Encontre Seu Lar dos Sonhos",
   heroSubtitle: "Imobiliária de alto padrão com os melhores imóveis da região. Apartamentos, casas, coberturas e terrenos exclusivos.",
-  heroImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=85",
   heroStyle: "split", cardStyle: "glass",
   whyLayout: "icon-row",
   sectionOrder: ["hero", "stats", "categories", "services", "why", "gallery", "testimonials", "cta", "location"],

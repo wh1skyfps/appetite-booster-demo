@@ -2,7 +2,7 @@ import type { NicheConfig } from "@/types/niche";
 export const esteticaAutomotivaConfig: NicheConfig = {
   id: "estetica-automotiva", name: "Black Diamond Auto", tagline: "Seu Carro Merece o Melhor",
   heroSubtitle: "Estética automotiva premium. Polimento técnico, vitrificação, PPF e detalhamento que transformam seu veículo.",
-  heroImage: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1400&q=85",
   heroStyle: "bold", cardStyle: "bold",
   whyLayout: "grid",
   sectionOrder: ["hero", "categories", "services", "process", "stats", "gallery", "cta", "testimonials", "why", "location"],

@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import type { NicheStat } from "@/types/niche";
 
@@ -14,8 +13,8 @@ const AnimatedNumber = ({ value }: { value: string }) => {
   useEffect(() => {
     if (!inView || !numericPart) { setDisplay(value); return; }
     const target = parseInt(numericPart);
-    const duration = 1500;
-    const steps = 40;
+    const duration = 2000;
+    const steps = 50;
     const increment = target / steps;
     let current = 0;
     let step = 0;
@@ -37,27 +36,32 @@ interface NicheStatsBarProps {
 }
 
 const NicheStatsBar = ({ stats, title }: NicheStatsBarProps) => (
-  <section className="py-12 md:py-20 section-dark">
-    <div className="container">
+  <section className="py-14 md:py-24 section-dark relative overflow-hidden">
+    {/* Subtle background pattern */}
+    <div className="absolute inset-0 opacity-[0.03]" style={{
+      backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+      backgroundSize: '40px 40px',
+    }} />
+    <div className="container relative z-10">
       {title && (
-        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center text-sm uppercase tracking-[0.2em] text-white/30 font-bold mb-10">
+        <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center text-xs uppercase tracking-[0.25em] text-white/25 font-bold mb-12">
           {title}
         </motion.p>
       )}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         {stats.map((stat, i) => (
           <motion.div
             key={stat.label}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-center"
           >
-            <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary mb-2">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight">
               <AnimatedNumber value={stat.value} />
             </p>
-            <p className="text-white/50 text-xs sm:text-sm font-medium">{stat.label}</p>
+            <p className="text-white/40 text-xs sm:text-sm font-medium">{stat.label}</p>
           </motion.div>
         ))}
       </div>

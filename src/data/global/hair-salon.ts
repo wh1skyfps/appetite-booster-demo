@@ -3,7 +3,7 @@ import type { NicheConfig } from "@/types/niche";
 export const hairSalonConfig: NicheConfig = {
   id: "hair-salon", name: "Luxe Hair Studio", tagline: "Your Hair, Our Masterpiece",
   heroSubtitle: "Premium hair styling, extensions, and color services by award-winning stylists. Walk in beautiful, walk out unforgettable.",
-  heroImage: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&q=85",
   heroStyle: "split", cardStyle: "overlay",
   whyLayout: "alternating",
   sectionOrder: ["hero", "categories", "gallery", "services", "why", "testimonials", "cta", "location"],

@@ -3,7 +3,7 @@ import type { NicheConfig } from "@/types/niche";
 export const dentalClinicConfig: NicheConfig = {
   id: "dental-clinic", name: "Bright Smile Dental", tagline: "Your Confidence Starts With Your Smile",
   heroSubtitle: "State-of-the-art dental care with a gentle touch. From routine checkups to complete smile makeovers.",
-  heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1400&q=85",
   heroStyle: "centered", cardStyle: "elegant",
   whyLayout: "centered-list",
   sectionOrder: ["hero", "stats", "categories", "services", "process", "why", "testimonials", "cta", "location"],

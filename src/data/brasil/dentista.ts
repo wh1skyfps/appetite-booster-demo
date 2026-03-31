@@ -2,7 +2,7 @@ import type { NicheConfig } from "@/types/niche";
 export const dentistaConfig: NicheConfig = {
   id: "dentista", name: "Sorriso Premium", tagline: "Seu Sorriso Merece o Melhor",
   heroSubtitle: "Odontologia de alto padrão com tecnologia de ponta. Implantes, lentes de contato dental, ortodontia invisível e mais.",
-  heroImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1400&q=85",
   heroStyle: "centered", cardStyle: "elegant",
   whyLayout: "centered-list",
   sectionOrder: ["hero", "stats", "categories", "services", "process", "why", "testimonials", "cta", "location"],
