@@ -3,7 +3,7 @@ import type { NicheConfig } from "@/types/niche";
 export const medSpaConfig: NicheConfig = {
   id: "med-spa", name: "Glow Aesthetics", tagline: "Where Science Meets Beauty",
   heroSubtitle: "Premium med spa treatments in a luxury setting. Botox, fillers, laser, and more — all performed by board-certified professionals.",
-  heroImage: "https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400&q=85",
   heroStyle: "luxury", cardStyle: "soft",
   whyLayout: "icon-row",
   sectionOrder: ["hero", "stats", "categories", "services", "gallery", "why", "cta", "testimonials", "location"],

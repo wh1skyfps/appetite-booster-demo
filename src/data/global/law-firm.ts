@@ -3,7 +3,7 @@ import type { NicheConfig } from "@/types/niche";
 export const lawFirmConfig: NicheConfig = {
   id: "law-firm", name: "Sterling & Associates", tagline: "Justice. Integrity. Results.",
   heroSubtitle: "Award-winning attorneys dedicated to protecting your rights and securing the best possible outcome for your case.",
-  heroImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=85",
   heroStyle: "cinematic", cardStyle: "minimal-row",
   whyLayout: "centered-list",
   sectionOrder: ["hero", "stats", "services", "why", "process", "testimonials", "cta", "location"],
