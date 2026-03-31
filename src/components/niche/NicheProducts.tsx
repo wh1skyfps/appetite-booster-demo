@@ -119,6 +119,52 @@ const ServiceCard = ({ product, whatsappNumber, i, cta, currency, variant }: { p
     );
   }
 
+  if (variant === "glass") {
+    return (
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
+        <img src={product.image} alt={product.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+        {product.tag && <span className="absolute top-3 right-3 bg-white/20 backdrop-blur-md text-white text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full border border-white/10">{product.tag}</span>}
+        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 backdrop-blur-sm bg-white/5">
+          <div className="flex items-end justify-between gap-3">
+            <div>
+              <h3 className="font-bold text-white text-base sm:text-lg mb-0.5">{product.name}</h3>
+              <p className="text-white/50 text-xs line-clamp-1">{product.desc}</p>
+            </div>
+            <div className="text-right flex-shrink-0">
+              <span className="text-lg sm:text-xl font-extrabold text-primary block">{currency}{product.price}</span>
+              <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-[10px] font-medium mt-1 transition-colors">
+                {cta} →
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  if (variant === "minimal-row") {
+    return (
+      <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="flex items-center gap-5 py-5 border-b border-border/40 last:border-0 group hover:bg-secondary/30 -mx-4 px-4 rounded-xl transition-colors">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex-shrink-0">
+          <img src={product.image} alt={product.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <h3 className="font-bold text-sm sm:text-base">{product.name}</h3>
+              <p className="text-muted-foreground text-xs line-clamp-1 mt-0.5">{product.desc}</p>
+            </div>
+            <div className="text-right flex-shrink-0">
+              <span className="text-lg font-extrabold text-primary">{currency}{product.price}</span>
+              {product.tag && <span className="block text-[9px] font-bold text-primary/70 mt-0.5">{product.tag}</span>}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
   // Default: elegant
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-border/30">
@@ -149,6 +195,8 @@ const gridStyles: Record<CardStyle, string> = {
   soft: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6",
   compact: "grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4",
   horizontal: "grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5",
+  glass: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5",
+  "minimal-row": "max-w-3xl mx-auto",
 };
 
 const NicheProducts = ({ products, whatsappNumber, cardStyle = "elegant", labels, currency }: NicheProductsProps) => {
