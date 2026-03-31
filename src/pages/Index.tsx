@@ -58,7 +58,7 @@ const Index = () => {
               </motion.div>
 
               <h1 className="text-[clamp(2.2rem,6vw,5.5rem)] font-extrabold leading-[1.05] mb-5 tracking-tight">
-                <span className="text-white/95">Demos que </span>
+                
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
                     vendem
