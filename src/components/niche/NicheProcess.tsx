@@ -8,14 +8,14 @@ interface NicheProcessProps {
 }
 
 const NicheProcess = ({ steps, title, highlight }: NicheProcessProps) => (
-  <section className="py-16 md:py-32 bg-background overflow-hidden">
+  <section className="py-20 md:py-36 bg-background overflow-hidden">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-center mb-14 md:mb-20"
+        className="text-center mb-16 md:mb-24"
       >
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-3">
           {title || "How It"} <span className="text-primary">{highlight || "Works"}</span>
@@ -28,25 +28,25 @@ const NicheProcess = ({ steps, title, highlight }: NicheProcessProps) => (
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-8 left-[12.5%] right-[12.5%] h-[2px] bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 origin-left"
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute top-10 left-[12.5%] right-[12.5%] h-[2px] bg-gradient-to-r from-primary/15 via-primary/40 to-primary/15 origin-left"
         />
         {steps.map((step, i) => (
           <motion.div
             key={step.title}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 45 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 + i * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex flex-col items-center text-center px-4"
+            transition={{ delay: 0.3 + i * 0.18, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="relative flex flex-col items-center text-center px-5"
           >
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-black mb-6 relative z-10 shadow-lg shadow-primary/25 border-4 border-background"
+              whileHover={{ scale: 1.12, y: -4 }}
+              className="w-20 h-20 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-black mb-7 relative z-10 shadow-xl shadow-primary/25 border-4 border-background"
             >
               {step.step}
             </motion.div>
-            <h3 className="font-bold text-base mb-2">{step.title}</h3>
+            <h3 className="font-bold text-base mb-2.5">{step.title}</h3>
             <p className="text-muted-foreground text-xs leading-relaxed max-w-[200px]">{step.desc}</p>
           </motion.div>
         ))}
@@ -58,23 +58,23 @@ const NicheProcess = ({ steps, title, highlight }: NicheProcessProps) => (
           initial={{ scaleY: 0 }}
           whileInView={{ scaleY: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute left-5 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/40 via-primary/20 to-transparent origin-top"
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/40 via-primary/20 to-transparent origin-top"
         />
         {steps.map((step, i) => (
           <motion.div
             key={step.title}
-            initial={{ opacity: 0, x: -25 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex gap-5 pb-10"
+            transition={{ delay: i * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="relative flex gap-6 pb-12"
           >
-            <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-black flex-shrink-0 relative z-10 shadow-md shadow-primary/20 border-2 border-background">
+            <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-black flex-shrink-0 relative z-10 shadow-lg shadow-primary/20 border-2 border-background">
               {step.step}
             </div>
-            <div className="pt-1.5">
-              <h3 className="font-bold text-sm mb-1.5">{step.title}</h3>
+            <div className="pt-2">
+              <h3 className="font-bold text-sm mb-2">{step.title}</h3>
               <p className="text-muted-foreground text-xs leading-relaxed">{step.desc}</p>
             </div>
           </motion.div>
