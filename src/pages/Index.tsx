@@ -61,7 +61,7 @@ const Index = () => {
                 
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-                    vendem
+                    Demos
                   </span>
                   <motion.span
                     initial={{ scaleX: 0 }}
