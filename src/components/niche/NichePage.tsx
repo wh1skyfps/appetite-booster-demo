@@ -9,6 +9,9 @@ import NicheWhatsAppCta from "./NicheWhatsAppCta";
 import NicheTestimonials from "./NicheTestimonials";
 import NicheLocation from "./NicheLocation";
 import NicheFooter from "./NicheFooter";
+import NicheStatsBar from "./NicheStatsBar";
+import NicheProcess from "./NicheProcess";
+import NicheGallery from "./NicheGallery";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 interface NichePageProps {
@@ -25,7 +28,6 @@ const NichePage = ({ config }: NichePageProps) => {
     root.style.setProperty("--ring", config.theme.primary);
     root.style.setProperty("--section-dark", config.theme.sectionDark);
     root.style.setProperty("--section-dark-foreground", config.theme.sectionDarkForeground);
-
     return () => {
       root.style.removeProperty("--primary");
       root.style.removeProperty("--primary-foreground");
@@ -36,10 +38,13 @@ const NichePage = ({ config }: NichePageProps) => {
     };
   }, [config]);
 
-  return (
-    <div className="min-h-screen">
-      <NicheNavbar name={config.name} whatsappNumber={config.whatsappNumber} labels={config.labels} backPath={config.backPath} />
+  const defaultOrder = ["hero", "stats", "categories", "services", "process", "why", "gallery", "cta", "testimonials", "location"];
+  const order = config.sectionOrder || defaultOrder;
+
+  const sectionMap: Record<string, React.ReactNode> = {
+    hero: (
       <NicheHero
+        key="hero"
         name={config.name}
         tagline={config.tagline}
         subtitle={config.heroSubtitle}
@@ -50,14 +55,22 @@ const NichePage = ({ config }: NichePageProps) => {
         heroEmoji={config.heroEmoji}
         labels={config.labels}
       />
-      <NicheCategories categories={config.categories} />
-      <NicheProducts products={config.products} whatsappNumber={config.whatsappNumber} cardStyle={config.cardStyle} labels={config.labels} currency={config.currency} />
-      <NicheWhySection points={config.whyPoints} labels={config.labels} />
-      <NicheWhatsAppCta ctaText={config.ctaText} ctaSubtext={config.ctaSubtext} whatsappNumber={config.whatsappNumber} labels={config.labels} />
-      <NicheTestimonials testimonials={config.testimonials} labels={config.labels} />
-      <div id="about">
-        <NicheLocation location={config.location} labels={config.labels} />
-      </div>
+    ),
+    stats: config.stats ? <NicheStatsBar key="stats" stats={config.stats} title={config.labels.statsTitle} /> : null,
+    categories: <NicheCategories key="categories" categories={config.categories} />,
+    services: <NicheProducts key="services" products={config.products} whatsappNumber={config.whatsappNumber} cardStyle={config.cardStyle} labels={config.labels} currency={config.currency} />,
+    process: config.processSteps ? <NicheProcess key="process" steps={config.processSteps} title={config.labels.processTitle} highlight={config.labels.processHighlight} /> : null,
+    why: <NicheWhySection key="why" points={config.whyPoints} labels={config.labels} layout={config.whyLayout} />,
+    gallery: config.gallery ? <NicheGallery key="gallery" images={config.gallery} title={config.labels.galleryTitle} highlight={config.labels.galleryHighlight} /> : null,
+    cta: <NicheWhatsAppCta key="cta" ctaText={config.ctaText} ctaSubtext={config.ctaSubtext} whatsappNumber={config.whatsappNumber} labels={config.labels} />,
+    testimonials: <NicheTestimonials key="testimonials" testimonials={config.testimonials} labels={config.labels} />,
+    location: <div key="location" id="about"><NicheLocation location={config.location} labels={config.labels} /></div>,
+  };
+
+  return (
+    <div className="min-h-screen">
+      <NicheNavbar name={config.name} whatsappNumber={config.whatsappNumber} labels={config.labels} backPath={config.backPath} />
+      {order.map((section) => sectionMap[section])}
       <NicheFooter name={config.name} tagline={config.footerTagline} labels={config.labels} backPath={config.backPath} />
       <FloatingWhatsApp />
     </div>

@@ -16,26 +16,64 @@ interface NicheHeroProps {
 
 const NicheHero = ({ name, tagline, subtitle, image, overlay, whatsappNumber, heroStyle, heroEmoji, labels }: NicheHeroProps) => {
   const primaryBtn = (cls: string) => (
-    <a
-      href="#services"
-      onClick={(e) => { e.preventDefault(); document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" }); }}
-      className={cls}
-    >
+    <a href="#services" onClick={(e) => { e.preventDefault(); document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" }); }} className={cls}>
       {labels.heroCtaPrimary}
     </a>
   );
-
   const secondaryBtn = (cls: string) => (
-    <a
-      href={`https://wa.me/${whatsappNumber}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cls}
-    >
+    <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className={cls}>
       <MessageCircle className="w-5 h-5" />
       {labels.heroCtaSecondary}
     </a>
   );
+
+  if (heroStyle === "cinematic") {
+    return (
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-16">
+        <div className="absolute inset-0">
+          <img src={image} alt={name} className="w-full h-full object-cover scale-105" loading="eager" />
+          <div className="absolute inset-0" style={{ background: overlay }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        </div>
+        <div className="container relative z-10 py-20">
+          <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className="max-w-2xl">
+            <motion.div initial={{ width: 0 }} animate={{ width: "5rem" }} transition={{ delay: 0.5, duration: 0.6 }} className="h-1 bg-primary mb-8 rounded-full" />
+            <span className="inline-block text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase mb-4 text-primary">{name}</span>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white mb-6 leading-[1] tracking-tight">{tagline}</h1>
+            <p className="text-base sm:text-lg text-white/60 mb-10 leading-relaxed max-w-lg">{subtitle}</p>
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              {primaryBtn("w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-bold px-10 py-4 rounded-full text-sm transition-all hover:scale-105 active:scale-95 min-h-[52px]")}
+              {secondaryBtn("w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 text-white font-medium px-10 py-4 rounded-full text-sm transition-all hover:bg-white/10 active:scale-95 min-h-[52px]")}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    );
+  }
+
+  if (heroStyle === "luxury") {
+    return (
+      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-16">
+        <div className="absolute inset-0">
+          <img src={image} alt={name} className="w-full h-full object-cover" loading="eager" />
+          <div className="absolute inset-0" style={{ background: overlay }} />
+        </div>
+        <div className="container relative z-10 py-20 text-center">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }} className="max-w-3xl mx-auto">
+            <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.3, duration: 0.8 }} className="w-20 h-[1px] bg-primary/60 mx-auto mb-6" />
+            <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="inline-block text-[10px] sm:text-xs font-medium tracking-[0.4em] uppercase mb-6 text-white/40">{name}</motion.span>
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-[1.1]">{tagline}</h1>
+            <p className="text-sm sm:text-base text-white/50 mb-10 max-w-lg mx-auto leading-relaxed">{subtitle}</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              {primaryBtn("w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-bold px-12 py-4 rounded-none text-sm tracking-widest uppercase transition-all hover:scale-105 active:scale-95 min-h-[52px]")}
+              {secondaryBtn("w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/30 text-white font-medium px-12 py-4 rounded-none text-sm tracking-widest uppercase transition-all hover:bg-white/10 active:scale-95 min-h-[52px]")}
+            </div>
+            <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.6, duration: 0.8 }} className="w-20 h-[1px] bg-primary/60 mx-auto mt-12" />
+          </motion.div>
+        </div>
+      </section>
+    );
+  }
 
   if (heroStyle === "split") {
     return (
@@ -146,11 +184,7 @@ const NicheHero = ({ name, tagline, subtitle, image, overlay, whatsappNumber, he
         </div>
         <div className="container relative z-10 py-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-2xl mx-auto">
-            {heroEmoji && (
-              <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2, type: "spring" }} className="inline-block text-4xl mb-4">
-                {heroEmoji}
-              </motion.span>
-            )}
+            {heroEmoji && <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2, type: "spring" }} className="inline-block text-4xl mb-4">{heroEmoji}</motion.span>}
             <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 leading-[1.05]">{tagline}</h1>
             <p className="text-base sm:text-lg text-white/75 mb-8 max-w-md mx-auto leading-relaxed">{subtitle}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
