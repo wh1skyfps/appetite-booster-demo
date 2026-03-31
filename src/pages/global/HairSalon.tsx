@@ -1,4 +1,5 @@
-import NichePage from "@/components/niche/NichePage";
-import { hairSalonConfig } from "@/data/global/hair-salon";
-const HairSalon = () => <NichePage config={hairSalonConfig} />;
+import HairSalonPage from "@/components/hair-salon/HairSalonPage";
+import { hairSalonEnContent } from "@/data/global/hair-salon-standalone";
+
+const HairSalon = () => <HairSalonPage content={hairSalonEnContent} />;
 export default HairSalon;
