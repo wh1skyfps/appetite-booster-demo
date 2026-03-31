@@ -1,0 +1,209 @@
+import type { HairSalonContent } from "@/components/hair-salon/HairSalonPage";
+
+export const salaoCabeleireiroPtContent: HairSalonContent = {
+  salonName: "Studio Luxe Hair",
+  phone: "(11) 98888-7777",
+  phoneLink: "tel:+5511988887777",
+  email: "contato@studioluxehair.com.br",
+  address: "Rua Oscar Freire, 500 - Jardins, São Paulo - SP",
+  parking: "Estacionamento no local",
+  bookingUrl: "#agendamento",
+  whatsappNumber: "5511988887777",
+  backPath: "/brasil",
+  currency: "R$",
+  heroImages: [
+    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+    "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
+    "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1200&q=80",
+    "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1200&q=80",
+  ],
+  salonInteriorImage: "https://images.unsplash.com/photo-1521590832167-7228fcb2c1b1?w=800&q=80",
+  nav: {
+    services: "Serviços",
+    pricing: "Preços",
+    results: "Resultados",
+    about: "Sobre",
+    contact: "Contato",
+    bookNow: "Agendar",
+  },
+  trust: [
+    { icon: "sparkles", label: "Extensões Premium" },
+    { icon: "heart", label: "Resultados Naturais" },
+    { icon: "award", label: "12+ Anos de Experiência" },
+    { icon: "shield", label: "Técnicas Não-Invasivas" },
+    { icon: "scissors", label: "Instalação Especializada" },
+    { icon: "mapPin", label: "Jardins, São Paulo" },
+  ],
+  about: {
+    subtitle: "Nossa História",
+    title: "Onde a Beleza se Torna Arte",
+    paragraphs: [
+      "Há mais de doze anos, o Studio Luxe Hair é referência em São Paulo para mulheres que buscam transformações capilares luxuosas e de aparência natural. Somos especializados em extensões premium 100% cabelo humano Remy que se integram perfeitamente ao seu cabelo natural — indetectáveis, leves e deslumbrantes.",
+      "Nossas estilistas utilizam técnicas invisíveis e não-invasivas, personalizadas para o seu tipo de cabelo, comprimento desejado e estilo de vida. Cada atendimento inclui consultoria personalizada, combinação profissional de cor, corte de precisão e acabamento impecável.",
+      "Visite nosso salão nos Jardins, onde temos uma coleção extensa de cores, comprimentos e texturas — prontas para transformação no mesmo dia. Porque você merece um cabelo que te faz sentir extraordinária.",
+    ],
+    cta: "Agendar Consultoria",
+  },
+  services: [
+    { title: "Extensões Tape-In", desc: "Painéis leves e discretos que ficam rentes ao couro cabeludo para um acabamento natural e indetectável. Aplicação rápida com resultados duradouros.", category: "extensoes" },
+    { title: "Fusão de Queratina", desc: "Colagem fio a fio para o movimento mais natural e versátil. Perfeito para cabelos finos a médios que buscam volume e comprimento.", category: "extensoes" },
+    { title: "Micro Cápsulas", desc: "Fixação suave, sem calor, usando micro cápsulas revestidas de silicone. Zero dano, máximo conforto, resultados lindos.", category: "extensoes" },
+    { title: "Mega Hair Sem Trança", desc: "Técnica revolucionária de trama plana — sem tranças, sem tensão, sem dano. Volume incrível com encaixe confortável e seguro.", category: "extensoes" },
+    { title: "Clip-In", desc: "Transformação instantânea para ocasiões especiais. Clip-ins de qualidade premium para volume, comprimento ou ambos — sem compromisso.", category: "extensoes" },
+    { title: "Balayage", desc: "Iluminação pintada à mão, com efeito solar natural que cresce lindamente. A técnica mais desejada para mechas naturais e sem esforço.", category: "cor" },
+    { title: "Mechas", desc: "Mechas posicionadas com precisão para adicionar profundidade, movimento e brilho. Personalizadas para complementar seu tom de pele e estilo.", category: "cor" },
+    { title: "Coloração", desc: "Serviços completos de cor, desde tonalizações sutis até transformações dramáticas. Formulação especializada para cor rica, duradoura e saudável.", category: "cor" },
+    { title: "Botox Capilar", desc: "Tratamento restaurador profundo que repara danos, elimina frizz e restaura brilho espelhado. O cabelo renasce.", category: "tratamento" },
+    { title: "Tratamento de Queratina", desc: "Tratamento alisante que transforma cabelos crespos e rebeldes em perfeição sedosa e lisa por meses.", category: "tratamento" },
+    { title: "Hidratação Profunda", desc: "Terapia intensiva de hidratação e reparação para cabelos secos, danificados ou com excesso de química. Restaura maciez, elasticidade e vitalidade.", category: "tratamento" },
+  ],
+  serviceCategories: [
+    { key: "extensoes", label: "Extensões Capilares" },
+    { key: "cor", label: "Serviços de Coloração" },
+    { key: "tratamento", label: "Tratamentos" },
+  ],
+  carouselSlides: [
+    { image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", title: "Mega Hair Trama", subtitle: "Sem Trança 50cm", price: "R$ 1.890", regular: "R$ 2.100", detail: "Duas Tramas · Cabelo e Instalação Inclusos" },
+    { image: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80", title: "Fusão de Queratina", subtitle: "100 Fios · 50cm", price: "R$ 2.590", regular: "R$ 3.100", detail: "Cabelo e Instalação Inclusos" },
+    { image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80", title: "Micro Cápsulas", subtitle: "100 Fios · 50cm", price: "R$ 2.590", regular: "R$ 3.100", detail: "Cabelo e Instalação Inclusos" },
+    { image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80", title: "Tape-In", subtitle: "40 Peças · 50cm", price: "R$ 1.590", regular: "R$ 1.890", detail: "Cabelo e Instalação Inclusos" },
+  ],
+  carouselSectionTitle: "Nossas Especialidades",
+  carouselSectionSubtitle: "Serviços Exclusivos",
+  beforeAfter: {
+    subtitle: "Resultados Reais",
+    title: "Transformações Deslumbrantes",
+    desc: "Toda mulher merece se sentir extraordinária. Veja os resultados transformadores que nossas clientes vivenciam.",
+    cta: "Comece Sua Transformação",
+  },
+  whyChoose: {
+    subtitle: "O Diferencial Studio Luxe",
+    title: "Por Que Nossas Clientes Nos Escolhem",
+    reasons: [
+      { icon: "sparkles", title: "Acabamento Natural e Perfeito", desc: "Nossas extensões se integram tão perfeitamente que ninguém saberá que não é seu cabelo natural." },
+      { icon: "heart", title: "Combinação de Cor Personalizada", desc: "Mistura de cores customizada para alcançar uma combinação impecável e indistinguível do seu cabelo." },
+      { icon: "award", title: "100% Cabelo Humano Remy", desc: "Apenas a melhor qualidade de cabelo com cutículas intactas para maciez e durabilidade incomparáveis." },
+      { icon: "shield", title: "Aplicação Invisível", desc: "Técnicas avançadas que são gentis com seu cabelo natural, sem pontos de fixação visíveis." },
+      { icon: "scissors", title: "Corte e Modelagem Especializada", desc: "Cada jogo é cortado e estilizado com precisão para emoldurar seu rosto e valorizar seus traços." },
+      { icon: "star", title: "Experiência Premium de Salão", desc: "Um espaço sereno e acolhedor projetado para fazer você se sentir mimada desde o momento que chega." },
+    ],
+  },
+  pricing: {
+    subtitle: "Investimento",
+    title: "Tabela de Preços",
+    note: "Todos os serviços de extensões incluem lavagem, escova, extensões, instalação, corte e finalização.",
+    lengths: ["50cm", "60cm"],
+    extensionServices: [
+      {
+        name: "Mega Hair Sem Trança",
+        lengths: {
+          "50cm": [
+            { qty: "1 Trama", price: "R$ 1.190" }, { qty: "2 Tramas", price: "R$ 1.890" },
+            { qty: "3 Tramas", price: "R$ 2.590" }, { qty: "4 Tramas", price: "R$ 3.250" },
+            { qty: "5 Tramas", price: "R$ 3.790" },
+          ],
+          "60cm": [
+            { qty: "1 Trama", price: "R$ 1.370" }, { qty: "2 Tramas", price: "R$ 2.290" },
+            { qty: "3 Tramas", price: "R$ 3.100" }, { qty: "4 Tramas", price: "R$ 3.920" },
+            { qty: "5 Tramas", price: "R$ 4.590" },
+          ],
+        },
+      },
+      {
+        name: "Tape-In",
+        lengths: {
+          "50cm": [
+            { qty: "20 Peças", price: "R$ 1.090" }, { qty: "40 Peças", price: "R$ 1.590" },
+            { qty: "60 Peças", price: "R$ 2.220" }, { qty: "80 Peças", price: "R$ 2.930" },
+            { qty: "100 Peças", price: "R$ 3.650" },
+          ],
+          "60cm": [
+            { qty: "20 Peças", price: "R$ 1.190" }, { qty: "40 Peças", price: "R$ 1.990" },
+            { qty: "60 Peças", price: "R$ 2.670" }, { qty: "80 Peças", price: "R$ 3.280" },
+            { qty: "100 Peças", price: "R$ 3.920" },
+          ],
+        },
+      },
+      {
+        name: "Micro Cápsulas & Queratina",
+        lengths: {
+          "50cm": [
+            { qty: "20 Fios", price: "R$ 1.080" }, { qty: "40 Fios", price: "R$ 1.490" },
+            { qty: "60 Fios", price: "R$ 1.990" }, { qty: "80 Fios", price: "R$ 2.290" },
+            { qty: "100 Fios", price: "R$ 2.590" },
+          ],
+          "60cm": [
+            { qty: "20 Fios", price: "R$ 1.290" }, { qty: "40 Fios", price: "R$ 1.790" },
+            { qty: "60 Fios", price: "R$ 2.370" }, { qty: "80 Fios", price: "R$ 2.750" },
+            { qty: "100 Fios", price: "R$ 3.100" },
+          ],
+        },
+      },
+    ],
+    beautyServices: [
+      {
+        category: "Mechas & Balayage",
+        items: [
+          { name: "Money Piece", price: "R$ 350 – R$ 590" },
+          { name: "Parcial", price: "R$ 590 – R$ 850" },
+          { name: "Meia Cabeça", price: "R$ 850 – R$ 1.200" },
+          { name: "Completa", price: "R$ 1.200 – R$ 1.690" },
+        ],
+      },
+      {
+        category: "Coloração",
+        items: [
+          { name: "Retoque de Raiz", price: "R$ 250 – R$ 450" },
+          { name: "Tonalização", price: "R$ 250 – R$ 590" },
+          { name: "Coloração Completa", price: "R$ 350 – R$ 720" },
+        ],
+      },
+      {
+        category: "Tratamentos Alisantes",
+        items: [
+          { name: "Botox Capilar", price: "R$ 350 – R$ 850" },
+          { name: "Hidratação Profunda", price: "R$ 200 – R$ 290" },
+          { name: "Tratamento de Queratina", price: "R$ 590 – R$ 1.080" },
+        ],
+      },
+    ],
+    beautyTitle: "Serviços de Cor & Tratamento",
+  },
+  testimonials: {
+    subtitle: "Amor das Clientes",
+    title: "O Que Nossas Clientes Dizem",
+    ratingText: "4.9 de 5 · Baseado em 1.000+ avaliações",
+    items: [
+      { name: "Beatriz O.", text: "Nunca me senti tão confiante. Minhas extensões ficaram completamente naturais — nem minhas amigas percebem. O Studio Luxe mudou minha vida.", rating: 5 },
+      { name: "Ana Paula M.", text: "O nível de profissionalismo e atenção aos detalhes é incomparável. Da consultoria ao resultado final, cada etapa foi perfeição.", rating: 5 },
+      { name: "Mariana S.", text: "Vim de Campinas porque todas me disseram que o Studio Luxe é o melhor. Tinham razão. Minhas tape-ins estão impecáveis.", rating: 5 },
+      { name: "Camila D.", text: "A combinação de cor ficou absolutamente perfeita. Não dá para ver onde meu cabelo termina e as extensões começam. Pura arte.", rating: 5 },
+      { name: "Fernanda P.", text: "Venho aqui há três anos. A qualidade nunca cai. Meu cabelo sempre parece digno de capa de revista. Não vou a nenhum outro lugar.", rating: 5 },
+      { name: "Juliana G.", text: "Saí do Studio Luxe me sentindo uma mulher completamente diferente. A transformação superou tudo que eu imaginava.", rating: 5 },
+    ],
+  },
+  instagramHandle: "@studioluxehair",
+  instagramUrl: "https://www.instagram.com/",
+  bookingCta: {
+    subtitle: "Sua Transformação Espera",
+    title: "Pronta para o Cabelo",
+    titleHighlight: "Que Você Sempre Sonhou?",
+    desc: "Agende sua consultoria personalizada hoje e descubra por que milhares de mulheres confiam no Studio Luxe para sua mais bela transformação capilar.",
+    bookBtn: "Agendar Horário",
+  },
+  contact: {
+    subtitle: "Visite-nos",
+    title: "Onde Estamos",
+    addressLabel: "Endereço do Salão",
+    parkingLabel: "Estacionamento",
+    phoneLabel: "Telefone",
+    emailLabel: "Email",
+    hoursLabel: "Horário",
+    hoursValue: ["Terça – Sábado", "9:00 – 20:00"],
+    closed: "Domingo & Segunda — Fechado",
+  },
+  footer: {
+    tagline: "Onde a beleza se torna arte.",
+    backLabel: "Voltar às Demos",
+  },
+};
