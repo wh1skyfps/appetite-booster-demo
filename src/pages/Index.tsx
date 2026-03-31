@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Globe, MapPin, ArrowRight, Sparkles } from "lucide-react";
+import { Globe, MapPin, Sparkles } from "lucide-react";
+import CardFlip from "@/components/ui/flip-card";
 
 const Index = () => {
   return (
