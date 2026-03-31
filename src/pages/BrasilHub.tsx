@@ -23,7 +23,7 @@ const BrasilHub = () => (
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <span className="inline-block text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase text-green-400/50 mb-4">Brasil</span>
+          
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold leading-[1.1] mb-4">
             Demos
           </h1>
