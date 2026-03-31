@@ -202,16 +202,16 @@ const gridStyles: Record<CardStyle, string> = {
 
 const NicheProducts = ({ products, whatsappNumber, cardStyle = "elegant", labels, currency }: NicheProductsProps) => {
   return (
-    <section id="services" className="py-16 md:py-32 bg-secondary/40">
+    <section id="services" className="py-20 md:py-36 bg-secondary/40">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-12 md:mb-16"
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-14 md:mb-20"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4">
             {labels.servicesTitle} <span className="text-primary">{labels.servicesHighlight}</span>
           </h2>
           <p className="text-muted-foreground text-sm md:text-lg max-w-md mx-auto">{labels.servicesSubtitle}</p>

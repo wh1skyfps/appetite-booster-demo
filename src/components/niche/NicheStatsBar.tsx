@@ -13,8 +13,8 @@ const AnimatedNumber = ({ value }: { value: string }) => {
   useEffect(() => {
     if (!inView || !numericPart) { setDisplay(value); return; }
     const target = parseInt(numericPart);
-    const duration = 2000;
-    const steps = 50;
+    const duration = 2200;
+    const steps = 60;
     const increment = target / steps;
     let current = 0;
     let step = 0;
@@ -36,32 +36,35 @@ interface NicheStatsBarProps {
 }
 
 const NicheStatsBar = ({ stats, title }: NicheStatsBarProps) => (
-  <section className="py-14 md:py-24 section-dark relative overflow-hidden">
-    {/* Subtle background pattern */}
+  <section className="py-16 md:py-28 section-dark relative overflow-hidden">
+    {/* Dot pattern */}
     <div className="absolute inset-0 opacity-[0.03]" style={{
       backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
       backgroundSize: '40px 40px',
     }} />
+    {/* Top/bottom gradient lines */}
+    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+    <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
     <div className="container relative z-10">
       {title && (
-        <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center text-xs uppercase tracking-[0.25em] text-white/25 font-bold mb-12">
+        <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold mb-14">
           {title}
         </motion.p>
       )}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-14">
         {stats.map((stat, i) => (
           <motion.div
             key={stat.label}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: i * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="text-center"
           >
-            <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight">
+            <p className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-primary mb-3 tracking-tight">
               <AnimatedNumber value={stat.value} />
             </p>
-            <p className="text-white/40 text-xs sm:text-sm font-medium">{stat.label}</p>
+            <p className="text-white/35 text-xs sm:text-sm font-medium">{stat.label}</p>
           </motion.div>
         ))}
       </div>
