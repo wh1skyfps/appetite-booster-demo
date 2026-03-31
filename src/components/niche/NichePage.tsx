@@ -38,7 +38,7 @@ const NichePage = ({ config }: NichePageProps) => {
 
   return (
     <div className="min-h-screen">
-      <NicheNavbar name={config.name} whatsappNumber={config.whatsappNumber} />
+      <NicheNavbar name={config.name} whatsappNumber={config.whatsappNumber} labels={config.labels} backPath={config.backPath} />
       <NicheHero
         name={config.name}
         tagline={config.tagline}
@@ -47,20 +47,18 @@ const NichePage = ({ config }: NichePageProps) => {
         overlay={config.theme.heroOverlay}
         whatsappNumber={config.whatsappNumber}
         heroStyle={config.heroStyle}
+        heroEmoji={config.heroEmoji}
+        labels={config.labels}
       />
       <NicheCategories categories={config.categories} />
-      <NicheProducts products={config.products} whatsappNumber={config.whatsappNumber} cardStyle={config.cardStyle} />
-      <NicheWhySection points={config.whyPoints} />
-      <NicheWhatsAppCta
-        ctaText={config.ctaText}
-        ctaSubtext={config.ctaSubtext}
-        whatsappNumber={config.whatsappNumber}
-      />
-      <NicheTestimonials testimonials={config.testimonials} />
-      <div id="sobre">
-        <NicheLocation location={config.location} />
+      <NicheProducts products={config.products} whatsappNumber={config.whatsappNumber} cardStyle={config.cardStyle} labels={config.labels} currency={config.currency} />
+      <NicheWhySection points={config.whyPoints} labels={config.labels} />
+      <NicheWhatsAppCta ctaText={config.ctaText} ctaSubtext={config.ctaSubtext} whatsappNumber={config.whatsappNumber} labels={config.labels} />
+      <NicheTestimonials testimonials={config.testimonials} labels={config.labels} />
+      <div id="about">
+        <NicheLocation location={config.location} labels={config.labels} />
       </div>
-      <NicheFooter name={config.name} tagline={config.footerTagline} />
+      <NicheFooter name={config.name} tagline={config.footerTagline} labels={config.labels} backPath={config.backPath} />
       <FloatingWhatsApp />
     </div>
   );
