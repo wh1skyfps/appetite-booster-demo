@@ -85,37 +85,16 @@ const Index = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Link to="/global" className="block group">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 bg-white/[0.02]">
-                    <div className="aspect-[16/10] md:aspect-[4/3] relative overflow-hidden">
-                      <img
-                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80"
-                        alt="International market"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-70"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,15%,3%)] via-[hsl(220,15%,3%)]/60 to-transparent" />
-                    </div>
-
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-6 h-6 rounded-md bg-blue-500/15 flex items-center justify-center">
-                          <Globe className="w-3.5 h-3.5 text-blue-400" />
-                        </div>
-                        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-blue-400/80">International</span>
-                      </div>
-                      <h2 className="text-xl md:text-3xl font-extrabold text-white/95 mb-1.5 tracking-tight">Global Market</h2>
-                      <p className="text-white/35 text-xs sm:text-sm mb-5 max-w-xs leading-relaxed">
-                        Premium demos for US, UK & Portugal — law firms, med spas, real estate & more.
-                      </p>
-                      <div className="inline-flex items-center gap-2 text-xs font-semibold text-white/30 group-hover:text-white/70 transition-all duration-300 tracking-wide uppercase">
-                        Explore demos
-                        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1.5" />
-                      </div>
-                    </div>
-
-                    {/* Hover shine */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-gradient-to-tr from-blue-500/[0.05] via-transparent to-transparent" />
-                  </div>
+                <Link to="/global" className="block">
+                  <CardFlip
+                    title="Global Market"
+                    subtitle="Premium demos for US, UK & Portugal"
+                    description="Law firms, med spas, real estate, dental clinics & more — designed to convert high-value clients worldwide."
+                    features={["Law Firms", "Med Spas", "Real Estate", "Dental Clinics"]}
+                    color="#3b82f6"
+                    icon={<Globe className="w-5 h-5 text-blue-400" />}
+                    image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80"
+                  />
                 </Link>
               </motion.div>
 
@@ -125,36 +104,16 @@ const Index = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Link to="/brasil" className="block group">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 bg-white/[0.02]">
-                    <div className="aspect-[16/10] md:aspect-[4/3] relative overflow-hidden">
-                      <img
-                        src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=900&q=80"
-                        alt="Brasil market"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-70"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,15%,3%)] via-[hsl(220,15%,3%)]/60 to-transparent" />
-                    </div>
-
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-6 h-6 rounded-md bg-emerald-500/15 flex items-center justify-center">
-                          <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-                        </div>
-                        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-emerald-400/80">Brasil</span>
-                      </div>
-                      <h2 className="text-xl md:text-3xl font-extrabold text-white/95 mb-1.5 tracking-tight">Mercado Brasileiro</h2>
-                      <p className="text-white/35 text-xs sm:text-sm mb-5 max-w-xs leading-relaxed">
-                        Demos premium para advogados, dentistas, clínicas, imobiliárias & mais.
-                      </p>
-                      <div className="inline-flex items-center gap-2 text-xs font-semibold text-white/30 group-hover:text-white/70 transition-all duration-300 tracking-wide uppercase">
-                        Explorar demos
-                        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1.5" />
-                      </div>
-                    </div>
-
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-gradient-to-tr from-emerald-500/[0.05] via-transparent to-transparent" />
-                  </div>
+                <Link to="/brasil" className="block">
+                  <CardFlip
+                    title="Mercado Brasileiro"
+                    subtitle="Demos premium para nichos de alto valor"
+                    description="Advogados, dentistas, clínicas estéticas, imobiliárias & mais — sites que fecham contratos no Brasil."
+                    features={["Advogados", "Dentistas", "Clínicas", "Imobiliárias"]}
+                    color="#10b981"
+                    icon={<MapPin className="w-5 h-5 text-emerald-400" />}
+                    image="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=900&q=80"
+                  />
                 </Link>
               </motion.div>
             </div>
