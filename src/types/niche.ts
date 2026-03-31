@@ -26,6 +26,28 @@ export interface NicheWhyPoint {
 export type HeroStyle = "centered" | "split" | "editorial" | "bold" | "minimal" | "playful";
 export type CardStyle = "elegant" | "overlay" | "horizontal" | "bold" | "soft" | "compact";
 
+export interface NicheLabels {
+  navServices: string;
+  navAbout: string;
+  navContact: string;
+  navCta: string;
+  heroCtaPrimary: string;
+  heroCtaSecondary: string;
+  servicesTitle: string;
+  servicesHighlight: string;
+  servicesSubtitle: string;
+  servicesCta: string;
+  whyTitle: string;
+  whyHighlight: string;
+  whySubtitle: string;
+  testimonialsTitle: string;
+  testimonialsHighlight: string;
+  locationTitle: string;
+  locationHighlight: string;
+  ctaButtonLabel: string;
+  backLabel: string;
+}
+
 export interface NicheConfig {
   id: string;
   name: string;
@@ -33,6 +55,7 @@ export interface NicheConfig {
   heroSubtitle: string;
   heroImage: string;
   heroStyle: HeroStyle;
+  heroEmoji?: string;
   cardStyle: CardStyle;
   theme: {
     primary: string;
@@ -56,4 +79,7 @@ export interface NicheConfig {
     mapQuery: string;
   };
   footerTagline: string;
+  currency: string;
+  backPath: string;
+  labels: NicheLabels;
 }

@@ -2,21 +2,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ArrowLeft, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import type { NicheLabels } from "@/types/niche";
 
 interface NicheNavbarProps {
   name: string;
   whatsappNumber?: string;
+  labels: NicheLabels;
+  backPath: string;
 }
 
-const links = [
-  { label: "Início", href: "#" },
-  { label: "Cardápio", href: "#cardapio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Contacto", href: "#contacto" },
-];
-
-const NicheNavbar = ({ name, whatsappNumber }: NicheNavbarProps) => {
+const NicheNavbar = ({ name, whatsappNumber, labels, backPath }: NicheNavbarProps) => {
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { label: labels.navServices, href: "#services" },
+    { label: labels.navAbout, href: "#about" },
+    { label: labels.navContact, href: "#contact" },
+  ];
 
   const scrollTo = (href: string) => {
     setOpen(false);
@@ -29,10 +31,12 @@ const NicheNavbar = ({ name, whatsappNumber }: NicheNavbarProps) => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/40">
       <div className="container flex items-center justify-between h-16">
         <div className="flex items-center gap-2.5">
-          <Link to="/" className="p-2 -ml-2 rounded-lg hover:bg-secondary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
+          <Link to={backPath} className="p-2 -ml-2 rounded-lg hover:bg-secondary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
             <ArrowLeft className="w-4 h-4 text-muted-foreground" />
           </Link>
-          <span className="font-extrabold text-base sm:text-lg tracking-tight truncate max-w-[160px] sm:max-w-none">{name}</span>
+          <button onClick={() => scrollTo("#")} className="font-extrabold text-base sm:text-lg tracking-tight truncate max-w-[160px] sm:max-w-none">
+            {name}
+          </button>
         </div>
 
         <div className="hidden md:flex items-center gap-5">
@@ -46,10 +50,10 @@ const NicheNavbar = ({ name, whatsappNumber }: NicheNavbarProps) => {
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 btn-whatsapp font-bold px-4 py-2 rounded-full text-xs transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground font-bold px-4 py-2 rounded-full text-xs transition-all hover:scale-105 active:scale-95"
             >
               <MessageCircle className="w-3.5 h-3.5" />
-              Pedir
+              {labels.navCta}
             </a>
           )}
         </div>
@@ -78,10 +82,10 @@ const NicheNavbar = ({ name, whatsappNumber }: NicheNavbarProps) => {
                   href={`https://wa.me/${whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 btn-whatsapp font-bold py-3 rounded-lg text-sm mt-2 min-h-[48px]"
+                  className="flex items-center justify-center gap-2 bg-primary text-primary-foreground font-bold py-3 rounded-lg text-sm mt-2 min-h-[48px]"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  Pedir pelo WhatsApp
+                  {labels.navCta}
                 </a>
               )}
             </div>
