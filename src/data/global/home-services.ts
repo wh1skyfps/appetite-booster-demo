@@ -4,8 +4,22 @@ export const homeServicesConfig: NicheConfig = {
   id: "home-services", name: "TrustHome Pro", tagline: "Your Home in Expert Hands",
   heroSubtitle: "Licensed, insured, and trusted home improvement professionals. From plumbing to renovations — we do it right.",
   heroImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
-  heroStyle: "centered", cardStyle: "compact",
-  theme: { primary: "220 80% 55%", primaryForeground: "0 0% 100%", accent: "25 80% 55%", heroOverlay: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.65))", sectionDark: "220 30% 10%", sectionDarkForeground: "0 0% 95%" },
+  heroStyle: "centered", cardStyle: "horizontal",
+  whyLayout: "grid",
+  sectionOrder: ["hero", "categories", "stats", "services", "process", "testimonials", "why", "cta", "location"],
+  theme: { primary: "220 80% 55%", primaryForeground: "0 0% 100%", accent: "25 80% 55%", heroOverlay: "linear-gradient(to bottom, rgba(0,20,60,0.5), rgba(0,0,0,0.65))", sectionDark: "220 30% 10%", sectionDarkForeground: "0 0% 95%" },
+  stats: [
+    { value: "2000+", label: "Projects Completed" },
+    { value: "100%", label: "Licensed & Insured" },
+    { value: "24/7", label: "Emergency Service" },
+    { value: "4.9", label: "Average Rating" },
+  ],
+  processSteps: [
+    { step: "1", title: "Request a Quote", desc: "Tell us about your project — we respond within 24 hours." },
+    { step: "2", title: "On-Site Assessment", desc: "Our expert visits your home for a detailed evaluation." },
+    { step: "3", title: "Professional Work", desc: "Licensed pros complete the job on time and on budget." },
+    { step: "4", title: "Quality Guarantee", desc: "100% satisfaction guarantee on every project." },
+  ],
   categories: [
     { name: "Plumbing", emoji: "🔧" }, { name: "Electrical", emoji: "⚡" }, { name: "HVAC", emoji: "❄️" },
     { name: "Painting", emoji: "🎨" }, { name: "Roofing", emoji: "🏠" }, { name: "Remodeling", emoji: "🔨" },
@@ -32,5 +46,5 @@ export const homeServicesConfig: NicheConfig = {
   whatsappNumber: "15556667788",
   location: { address: "850 Tradecraft Dr, Dallas, TX 75201", hours: "Mon-Fri: 7AM - 6PM | Sat: 8AM - 2PM | Emergency: 24/7", phone: "+1 (555) 666-7788", mapQuery: "home services Dallas TX" },
   footerTagline: "Licensed. Insured. Trusted.", currency: "$", backPath: "/global",
-  labels: { navServices: "Services", navAbout: "About", navContact: "Contact", navCta: "Free Quote", heroCtaPrimary: "Our Services", heroCtaSecondary: "Get Free Quote", servicesTitle: "Our", servicesHighlight: "Services", servicesSubtitle: "Professional home improvement services you can trust.", servicesCta: "Quote", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "Your online presence builds trust before the first handshake.", testimonialsTitle: "What our", testimonialsHighlight: "clients say", locationTitle: "Find", locationHighlight: "us", ctaButtonLabel: "Request Free Quote", backLabel: "Back to Demos" },
+  labels: { navServices: "Services", navAbout: "About", navContact: "Contact", navCta: "Free Quote", heroCtaPrimary: "Our Services", heroCtaSecondary: "Get Free Quote", servicesTitle: "Our", servicesHighlight: "Services", servicesSubtitle: "Professional home improvement services you can trust.", servicesCta: "Quote", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "Your online presence builds trust before the first handshake.", testimonialsTitle: "What our", testimonialsHighlight: "clients say", locationTitle: "Find", locationHighlight: "us", ctaButtonLabel: "Request Free Quote", backLabel: "Back to Demos", statsTitle: "Why Homeowners Trust Us", processTitle: "How It", processHighlight: "Works" },
 };

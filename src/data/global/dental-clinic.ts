@@ -5,7 +5,21 @@ export const dentalClinicConfig: NicheConfig = {
   heroSubtitle: "State-of-the-art dental care with a gentle touch. From routine checkups to complete smile makeovers.",
   heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80",
   heroStyle: "centered", cardStyle: "elegant",
-  theme: { primary: "200 90% 50%", primaryForeground: "0 0% 100%", accent: "200 50% 92%", heroOverlay: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.6))", sectionDark: "200 40% 10%", sectionDarkForeground: "0 0% 95%" },
+  whyLayout: "centered-list",
+  sectionOrder: ["hero", "stats", "categories", "services", "process", "why", "testimonials", "cta", "location"],
+  theme: { primary: "200 90% 50%", primaryForeground: "0 0% 100%", accent: "200 50% 92%", heroOverlay: "linear-gradient(to bottom, rgba(0,30,60,0.5), rgba(0,0,0,0.6))", sectionDark: "200 40% 10%", sectionDarkForeground: "0 0% 95%" },
+  stats: [
+    { value: "15000+", label: "Happy Patients" },
+    { value: "25+", label: "Years of Practice" },
+    { value: "99%", label: "Success Rate" },
+    { value: "8", label: "Specialist Dentists" },
+  ],
+  processSteps: [
+    { step: "1", title: "Book Online", desc: "Schedule your appointment in just a few clicks." },
+    { step: "2", title: "Consultation", desc: "Comprehensive exam and personalized treatment plan." },
+    { step: "3", title: "Treatment", desc: "State-of-the-art procedures with your comfort as priority." },
+    { step: "4", title: "Follow Up", desc: "Ongoing care to maintain your perfect smile." },
+  ],
   categories: [
     { name: "General", emoji: "🦷" }, { name: "Cosmetic", emoji: "✨" }, { name: "Implants", emoji: "🔩" },
     { name: "Orthodontics", emoji: "😁" }, { name: "Whitening", emoji: "⚡" }, { name: "Emergency", emoji: "🚨" },
@@ -32,5 +46,5 @@ export const dentalClinicConfig: NicheConfig = {
   whatsappNumber: "15551112233",
   location: { address: "321 Dental Plaza, Suite 100, Miami, FL 33101", hours: "Mon-Fri: 8AM - 6PM | Sat: 9AM - 2PM", phone: "+1 (555) 111-2233", mapQuery: "dental clinic Miami" },
   footerTagline: "Modern dentistry. Exceptional care.", currency: "$", backPath: "/global",
-  labels: { navServices: "Services", navAbout: "About", navContact: "Contact", navCta: "Schedule", heroCtaPrimary: "Our Services", heroCtaSecondary: "Schedule Visit", servicesTitle: "Our", servicesHighlight: "Services", servicesSubtitle: "Comprehensive dental care for the whole family.", servicesCta: "Book", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "Your online presence is your first impression.", testimonialsTitle: "What our", testimonialsHighlight: "patients say", locationTitle: "Find", locationHighlight: "us", ctaButtonLabel: "Schedule Appointment", backLabel: "Back to Demos" },
+  labels: { navServices: "Services", navAbout: "About", navContact: "Contact", navCta: "Schedule", heroCtaPrimary: "Our Services", heroCtaSecondary: "Schedule Visit", servicesTitle: "Our", servicesHighlight: "Services", servicesSubtitle: "Comprehensive dental care for the whole family.", servicesCta: "Book", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "Your online presence is your first impression.", testimonialsTitle: "What our", testimonialsHighlight: "patients say", locationTitle: "Find", locationHighlight: "us", ctaButtonLabel: "Schedule Appointment", backLabel: "Back to Demos", statsTitle: "Numbers That Speak", processTitle: "Your Journey to a", processHighlight: "Perfect Smile" },
 };

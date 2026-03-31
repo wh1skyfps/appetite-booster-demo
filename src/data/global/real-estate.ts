@@ -4,8 +4,23 @@ export const realEstateConfig: NicheConfig = {
   id: "real-estate", name: "Prestige Properties", tagline: "Find Your Dream Home",
   heroSubtitle: "Luxury real estate services with a personal touch. From penthouses to estates — we find the perfect property for you.",
   heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
-  heroStyle: "split", cardStyle: "elegant",
+  heroStyle: "split", cardStyle: "glass",
+  whyLayout: "icon-row",
+  sectionOrder: ["hero", "stats", "categories", "services", "why", "gallery", "testimonials", "cta", "location"],
   theme: { primary: "160 70% 40%", primaryForeground: "0 0% 100%", accent: "160 30% 92%", heroOverlay: "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5))", sectionDark: "160 30% 8%", sectionDarkForeground: "0 0% 95%" },
+  stats: [
+    { value: "$2B+", label: "Properties Sold" },
+    { value: "200+", label: "Luxury Listings" },
+    { value: "15+", label: "Years of Excellence" },
+    { value: "95%", label: "Client Retention" },
+  ],
+  gallery: [
+    { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80", alt: "Luxury Penthouse Interior", span: "wide" },
+    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: "Modern Home Exterior" },
+    { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80", alt: "Waterfront Villa", span: "tall" },
+    { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80", alt: "Suburban Estate" },
+    { src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80", alt: "Downtown Loft" },
+  ],
   categories: [
     { name: "Houses", emoji: "🏠" }, { name: "Apartments", emoji: "🏢" }, { name: "Penthouses", emoji: "🌆" },
     { name: "Villas", emoji: "🏡" }, { name: "Commercial", emoji: "🏗️" }, { name: "Land", emoji: "🌳" },
@@ -32,5 +47,5 @@ export const realEstateConfig: NicheConfig = {
   whatsappNumber: "15553334455",
   location: { address: "500 Luxury Row, Malibu, CA 90265", hours: "Mon-Sat: 9AM - 7PM | Sun: 10AM - 4PM", phone: "+1 (555) 333-4455", mapQuery: "luxury real estate Malibu" },
   footerTagline: "Where luxury meets lifestyle.", currency: "$", backPath: "/global",
-  labels: { navServices: "Listings", navAbout: "About", navContact: "Contact", navCta: "Schedule Tour", heroCtaPrimary: "View Listings", heroCtaSecondary: "Schedule a Tour", servicesTitle: "Featured", servicesHighlight: "Properties", servicesSubtitle: "Handpicked properties for discerning buyers.", servicesCta: "Inquire", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "Your listings deserve a luxury showcase.", testimonialsTitle: "What our", testimonialsHighlight: "clients say", locationTitle: "Our", locationHighlight: "Office", ctaButtonLabel: "Contact Us", backLabel: "Back to Demos" },
+  labels: { navServices: "Listings", navAbout: "About", navContact: "Contact", navCta: "Schedule Tour", heroCtaPrimary: "View Listings", heroCtaSecondary: "Schedule a Tour", servicesTitle: "Featured", servicesHighlight: "Properties", servicesSubtitle: "Handpicked properties for discerning buyers.", servicesCta: "Inquire", whyTitle: "Why choose a", whyHighlight: "premium website", whySubtitle: "Your listings deserve a luxury showcase.", testimonialsTitle: "What our", testimonialsHighlight: "clients say", locationTitle: "Our", locationHighlight: "Office", ctaButtonLabel: "Contact Us", backLabel: "Back to Demos", statsTitle: "Market Leaders", galleryTitle: "Featured", galleryHighlight: "Properties" },
 };

@@ -1,11 +1,19 @@
 import type { NicheConfig } from "@/types/niche";
-const br = { navServices: "Serviços", navAbout: "Sobre", navContact: "Contato", navCta: "Agendar", heroCtaPrimary: "Nossos Serviços", heroCtaSecondary: "Agendar Horário", servicesTitle: "Nossos", servicesHighlight: "Serviços", servicesSubtitle: "Transformações que elevam sua autoestima.", servicesCta: "Agendar", whyTitle: "Por que ter um", whyHighlight: "site premium", whySubtitle: "Mais que um site — uma vitrine da sua arte.", testimonialsTitle: "O que dizem nossos", testimonialsHighlight: "clientes", locationTitle: "Onde", locationHighlight: "estamos", ctaButtonLabel: "Agendar Agora", backLabel: "Voltar às Demos" };
 export const salaoCabeleireiroConfig: NicheConfig = {
   id: "salao-cabeleireiro", name: "Studio Luxe Hair", tagline: "Seu Cabelo, Nossa Arte",
   heroSubtitle: "Cortes, coloração, extensões e tratamentos capilares com os melhores profissionais. Transforme seu visual.",
   heroImage: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
   heroStyle: "split", cardStyle: "overlay",
-  theme: { primary: "290 60% 45%", primaryForeground: "0 0% 100%", accent: "40 70% 55%", heroOverlay: "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5))", sectionDark: "290 25% 10%", sectionDarkForeground: "0 0% 95%" },
+  whyLayout: "alternating",
+  sectionOrder: ["hero", "categories", "gallery", "services", "why", "testimonials", "cta", "location"],
+  theme: { primary: "290 60% 45%", primaryForeground: "0 0% 100%", accent: "40 70% 55%", heroOverlay: "linear-gradient(to bottom, rgba(40,0,60,0.4), rgba(0,0,0,0.5))", sectionDark: "290 25% 10%", sectionDarkForeground: "0 0% 95%" },
+  gallery: [
+    { src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80", alt: "Transformação Balayage", span: "tall" },
+    { src: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80", alt: "Coloração" },
+    { src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80", alt: "Extensões" },
+    { src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80", alt: "Tratamento Capilar", span: "wide" },
+    { src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80", alt: "Penteado Noiva" },
+  ],
   categories: [
     { name: "Cortes", emoji: "✂️" }, { name: "Coloração", emoji: "🎨" }, { name: "Extensões", emoji: "💇‍♀️" },
     { name: "Tratamentos", emoji: "🧴" }, { name: "Penteados", emoji: "💫" }, { name: "Noivas", emoji: "👰" },
@@ -30,5 +38,6 @@ export const salaoCabeleireiroConfig: NicheConfig = {
   ],
   ctaText: "Pronta pra Transformação?", ctaSubtext: "Agende seu horário e deixe nossos especialistas cuidarem do seu visual.",
   whatsappNumber: "5511988887777", location: { address: "Rua Oscar Freire, 500 - Jardins, São Paulo - SP", hours: "Ter-Sáb: 9h - 20h | Dom: 10h - 16h", phone: "(11) 98888-7777", mapQuery: "salao de beleza Jardins Sao Paulo" },
-  footerTagline: "Onde cada fio conta uma história.", currency: "R$", backPath: "/brasil", labels: br,
+  footerTagline: "Onde cada fio conta uma história.", currency: "R$", backPath: "/brasil",
+  labels: { navServices: "Serviços", navAbout: "Sobre", navContact: "Contato", navCta: "Agendar", heroCtaPrimary: "Nossos Serviços", heroCtaSecondary: "Agendar Horário", servicesTitle: "Nossos", servicesHighlight: "Serviços", servicesSubtitle: "Transformações que elevam sua autoestima.", servicesCta: "Agendar", whyTitle: "Por que ter um", whyHighlight: "site premium", whySubtitle: "Mais que um site — uma vitrine da sua arte.", testimonialsTitle: "O que dizem nossas", testimonialsHighlight: "clientes", locationTitle: "Onde", locationHighlight: "estamos", ctaButtonLabel: "Agendar Agora", backLabel: "Voltar às Demos", galleryTitle: "Nosso", galleryHighlight: "Portfólio" },
 };

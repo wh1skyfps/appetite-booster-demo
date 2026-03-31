@@ -23,8 +23,27 @@ export interface NicheWhyPoint {
   icon: string;
 }
 
-export type HeroStyle = "centered" | "split" | "editorial" | "bold" | "minimal" | "playful";
-export type CardStyle = "elegant" | "overlay" | "horizontal" | "bold" | "soft" | "compact";
+export interface NicheStat {
+  value: string;
+  label: string;
+}
+
+export interface NicheProcessStep {
+  step: string;
+  title: string;
+  desc: string;
+  icon?: string;
+}
+
+export interface NicheGalleryImage {
+  src: string;
+  alt: string;
+  span?: "wide" | "tall" | "normal";
+}
+
+export type HeroStyle = "centered" | "split" | "editorial" | "bold" | "minimal" | "playful" | "cinematic" | "luxury";
+export type CardStyle = "elegant" | "overlay" | "horizontal" | "bold" | "soft" | "compact" | "glass" | "minimal-row";
+export type WhyLayout = "grid" | "alternating" | "centered-list" | "icon-row";
 
 export interface NicheLabels {
   navServices: string;
@@ -46,6 +65,11 @@ export interface NicheLabels {
   locationHighlight: string;
   ctaButtonLabel: string;
   backLabel: string;
+  statsTitle?: string;
+  processTitle?: string;
+  processHighlight?: string;
+  galleryTitle?: string;
+  galleryHighlight?: string;
 }
 
 export interface NicheConfig {
@@ -57,6 +81,7 @@ export interface NicheConfig {
   heroStyle: HeroStyle;
   heroEmoji?: string;
   cardStyle: CardStyle;
+  whyLayout?: WhyLayout;
   theme: {
     primary: string;
     primaryForeground: string;
@@ -69,6 +94,10 @@ export interface NicheConfig {
   products: NicheProduct[];
   whyPoints: NicheWhyPoint[];
   testimonials: NicheTestimonial[];
+  stats?: NicheStat[];
+  processSteps?: NicheProcessStep[];
+  gallery?: NicheGalleryImage[];
+  sectionOrder?: string[];
   ctaText: string;
   ctaSubtext: string;
   whatsappNumber: string;

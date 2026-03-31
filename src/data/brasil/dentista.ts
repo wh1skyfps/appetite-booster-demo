@@ -1,11 +1,24 @@
 import type { NicheConfig } from "@/types/niche";
-const br = { navServices: "Serviços", navAbout: "Sobre", navContact: "Contato", navCta: "Agendar", heroCtaPrimary: "Nossos Serviços", heroCtaSecondary: "Agendar Consulta", servicesTitle: "Nossos", servicesHighlight: "Serviços", servicesSubtitle: "Odontologia moderna com tecnologia de ponta.", servicesCta: "Agendar", whyTitle: "Por que ter um", whyHighlight: "site premium", whySubtitle: "Sua presença online é o primeiro contato com o paciente.", testimonialsTitle: "O que dizem nossos", testimonialsHighlight: "pacientes", locationTitle: "Onde", locationHighlight: "estamos", ctaButtonLabel: "Agendar Consulta", backLabel: "Voltar às Demos" };
 export const dentistaConfig: NicheConfig = {
   id: "dentista", name: "Sorriso Premium", tagline: "Seu Sorriso Merece o Melhor",
   heroSubtitle: "Odontologia de alto padrão com tecnologia de ponta. Implantes, lentes de contato dental, ortodontia invisível e mais.",
   heroImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80",
   heroStyle: "centered", cardStyle: "elegant",
-  theme: { primary: "180 70% 40%", primaryForeground: "0 0% 100%", accent: "180 40% 92%", heroOverlay: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.65))", sectionDark: "180 30% 10%", sectionDarkForeground: "0 0% 95%" },
+  whyLayout: "centered-list",
+  sectionOrder: ["hero", "stats", "categories", "services", "process", "why", "testimonials", "cta", "location"],
+  theme: { primary: "180 70% 40%", primaryForeground: "0 0% 100%", accent: "180 40% 92%", heroOverlay: "linear-gradient(to bottom, rgba(0,40,50,0.5), rgba(0,0,0,0.65))", sectionDark: "180 30% 10%", sectionDarkForeground: "0 0% 95%" },
+  stats: [
+    { value: "10000+", label: "Pacientes Atendidos" },
+    { value: "99%", label: "Taxa de Sucesso" },
+    { value: "20+", label: "Anos de Experiência" },
+    { value: "6", label: "Dentistas Especialistas" },
+  ],
+  processSteps: [
+    { step: "1", title: "Agendamento", desc: "Marque online em poucos cliques." },
+    { step: "2", title: "Avaliação", desc: "Exame completo com radiografia e plano personalizado." },
+    { step: "3", title: "Tratamento", desc: "Procedimento com tecnologia de ponta e conforto total." },
+    { step: "4", title: "Acompanhamento", desc: "Retornos para garantir resultado perfeito." },
+  ],
   categories: [
     { name: "Implantes", emoji: "🦷" }, { name: "Lentes", emoji: "✨" }, { name: "Ortodontia", emoji: "😁" },
     { name: "Clareamento", emoji: "⚡" }, { name: "Check-up", emoji: "🩺" }, { name: "Próteses", emoji: "🔧" },
@@ -30,5 +43,6 @@ export const dentistaConfig: NicheConfig = {
   ],
   ctaText: "Quer o Sorriso dos Sonhos?", ctaSubtext: "Agende sua avaliação e descubra o melhor tratamento para você.",
   whatsappNumber: "5511977776666", location: { address: "Av. Brasil, 2000 - Centro, Rio de Janeiro - RJ", hours: "Seg-Sex: 8h - 18h | Sáb: 9h - 13h", phone: "(21) 97777-6666", mapQuery: "dentista centro Rio de Janeiro" },
-  footerTagline: "Odontologia moderna. Cuidado excepcional.", currency: "R$", backPath: "/brasil", labels: br,
+  footerTagline: "Odontologia moderna. Cuidado excepcional.", currency: "R$", backPath: "/brasil",
+  labels: { navServices: "Serviços", navAbout: "Sobre", navContact: "Contato", navCta: "Agendar", heroCtaPrimary: "Nossos Serviços", heroCtaSecondary: "Agendar Consulta", servicesTitle: "Nossos", servicesHighlight: "Serviços", servicesSubtitle: "Odontologia moderna com tecnologia de ponta.", servicesCta: "Agendar", whyTitle: "Por que ter um", whyHighlight: "site premium", whySubtitle: "Sua presença online é o primeiro contato com o paciente.", testimonialsTitle: "O que dizem nossos", testimonialsHighlight: "pacientes", locationTitle: "Onde", locationHighlight: "estamos", ctaButtonLabel: "Agendar Consulta", backLabel: "Voltar às Demos", statsTitle: "Números que Inspiram Confiança", processTitle: "Sua Jornada até o", processHighlight: "Sorriso Perfeito" },
 };
