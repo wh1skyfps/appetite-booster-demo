@@ -2,7 +2,7 @@ import type { NicheConfig } from "@/types/niche";
 export const clinicaEsteticaConfig: NicheConfig = {
   id: "clinica-estetica", name: "Clínica Essence", tagline: "Beleza que Transforma",
   heroSubtitle: "Tratamentos estéticos de alta performance em um ambiente premium. Harmonização facial, laser, skincare e muito mais.",
-  heroImage: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1400&q=85",
   heroStyle: "luxury", cardStyle: "soft",
   whyLayout: "icon-row",
   sectionOrder: ["hero", "stats", "categories", "services", "gallery", "why", "cta", "testimonials", "location"],

@@ -2,7 +2,7 @@ import type { NicheConfig } from "@/types/niche";
 export const clinicaPremiumConfig: NicheConfig = {
   id: "clinica-premium", name: "Clínica Vita Excellence", tagline: "Excelência em Saúde e Bem-estar",
   heroSubtitle: "Consultório médico de alto padrão com atendimento personalizado. Dermatologia, nutrologia, medicina preventiva e mais.",
-  heroImage: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400&q=85",
   heroStyle: "editorial", cardStyle: "elegant",
   whyLayout: "alternating",
   sectionOrder: ["hero", "stats", "categories", "services", "why", "process", "testimonials", "cta", "location"],

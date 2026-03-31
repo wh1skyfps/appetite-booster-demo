@@ -2,7 +2,7 @@ import type { NicheConfig } from "@/types/niche";
 export const advogadoConfig: NicheConfig = {
   id: "advogado", name: "Monteiro & Associados", tagline: "Justiça. Integridade. Resultados.",
   heroSubtitle: "Escritório de advocacia com mais de 15 anos de experiência. Atuamos em direito civil, trabalhista, empresarial e criminal.",
-  heroImage: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1200&q=80",
+  heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=85",
   heroStyle: "cinematic", cardStyle: "minimal-row",
   whyLayout: "centered-list",
   sectionOrder: ["hero", "stats", "services", "why", "process", "testimonials", "cta", "location"],
